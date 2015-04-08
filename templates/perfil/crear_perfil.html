@@ -1,0 +1,13 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Crear perfil </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+ <form action="{% url 'perfil:crear_perfil' %}" method="post">
+ 	{% csrf_token %}
+ 	{{ form.as_p }}
+ 	<input type='submit' value='Crear perfil' />
+ </form>

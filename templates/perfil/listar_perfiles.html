@@ -1,0 +1,24 @@
+<table style="width:100%">
+  <tr>
+    <td><h2> Lista de perfiles </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table>
+
+{% for perfil in lista_perfiles %}
+
+<li>
+	{{ perfil.name }}
+	{% if perms.auth.change_group %}
+		<a href="{% url 'perfil:modificar_perfil' perfil.id %}"> Modificar </a>
+	{% endif %}
+
+	{% if perms.auth.delete_group %}
+		<a href="{% url 'perfil:eliminar_perfil' perfil.id %}"> Eliminar </a>
+	{% endif %}
+</br></br>
+</li>
+
+{% endfor %}
+
+<a href="{% url 'perfil:menu_perfil' %}"> Administrar perfiles </a>

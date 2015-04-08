@@ -1,0 +1,20 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Administrar Perfiles </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.auth.add_group %}
+	<li>
+		<a href="{% url 'perfil:crear_perfil' %}"> Crear perfil </a>
+	</li></br>
+{% endif %}
+
+<li>
+	<a href="{% url 'perfil:listar_perfiles' %}"> Listar perfiles </a>
+</li></br>
+
+
+<a href="{% url 'inicio:menu' %}"> Menu principal </a>

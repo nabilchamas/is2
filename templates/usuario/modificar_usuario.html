@@ -1,0 +1,14 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Modificar usuario </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+ <form action="{% url 'usuario:modificar_usuario' usuario_id %}" method="post">
+ 	{% csrf_token %}
+ 	{{ form.as_p }}
+ 	<input type='submit' value='Modificar usuario' />
+ </form>
+

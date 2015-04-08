@@ -1,0 +1,22 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Administrar usuarios </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.auth.add_user %}
+	<li>
+		<a href="{% url 'usuario:crear_usuario' %}"> Crear usuario </a>
+	</li></br>
+{% endif %}
+
+<li>
+	<a href="{% url 'usuario:listar_usuarios' %}"> Listar usuarios </a>
+</li></br>
+
+<a href="{% url 'inicio:menu' %}"> Menu principal </a>
+
+
+

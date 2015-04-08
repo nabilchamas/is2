@@ -1,0 +1,29 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Lista de proyectos </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% for proyecto in lista_proyectos %}
+
+<li>
+	{{ proyecto.nombre }}
+	{% if perms.proyecto.change_proyecto %}
+		<a href="{% url 'proyecto:modificar_proyecto' proyecto.id %}"> Modificar </a>
+	{% endif %}
+
+	{% if perms.proyecto.delete_proyecto %}
+		<a href="{% url 'proyecto:eliminar_proyecto' proyecto.id %}"> Eliminar </a>
+	{% endif %}
+	</br></br>
+</li>
+
+{% endfor %}
+
+
+<a href="{% url 'proyecto:menu_proyecto' %}"> Administrar proyectos </a>
+
+
+

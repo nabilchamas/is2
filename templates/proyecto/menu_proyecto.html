@@ -1,0 +1,19 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Administrar proyectos </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.proyecto.add_proyecto %}
+	<li>
+		<a href="{% url 'proyecto:crear_proyecto' %}"> Crear proyecto </a>
+	</li></br>
+{% endif %}
+
+<li>
+	<a href="{% url 'proyecto:listar_proyectos' %}"> Listar proyectos </a>
+</li></br>
+
+<a href="{% url 'inicio:menu' %}"> Menu principal </a>

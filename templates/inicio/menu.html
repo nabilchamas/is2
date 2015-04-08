@@ -1,0 +1,28 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Menu </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.auth.add_user or perms.auth.change_user or perms.auth.delete_user %}
+<li>
+	<a href="{% url 'usuario:menu_usuario' %}"> Menu usuario </a>
+</li></br>
+{% endif %}
+
+{% if perms.auth.add_group or perms.auth.change_group or perms.auth.delete_group %}
+<li>
+	<a href="{% url 'perfil:menu_perfil' %}"> Menu perfil </a>
+</li></br>
+{% endif %}
+
+{% if perms.proyecto %}
+<li>
+	<a href="{% url 'proyecto:menu_proyecto' %}"> Menu proyecto </a>
+</li></br>
+{% endif %}
+
+
+

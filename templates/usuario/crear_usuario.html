@@ -1,0 +1,15 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Crear usuario </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+ <form action="{% url 'usuario:crear_usuario' %}" method="post">
+ 	{% csrf_token %}
+ 	{{ form.as_p }}
+ 	<input type='submit' value='Crear usuario' />
+ </form>
+
+

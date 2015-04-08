@@ -1,0 +1,26 @@
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Lista de usuarios </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table>
+
+{% for usuario in lista_usuarios %}
+
+<li>
+	{{ usuario.username }}
+	{% if perms.auth.change_user %}
+		<a href="{% url 'usuario:modificar_usuario' usuario.id %}"> Modificar </a>
+	{% endif %}
+
+	{% if perms.auth.delete_user %}
+		<a href="{% url 'usuario:eliminar_usuario' usuario.id %}"> Eliminar </a>
+	{% endif %}
+</br></br>
+</li>
+
+{% endfor %}
+
+<a href="{% url 'usuario:menu_usuario' %}"> Administrar usuarios </a>
+

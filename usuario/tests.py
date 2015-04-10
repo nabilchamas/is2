@@ -22,4 +22,13 @@ class UsuarioTestCase(TestCase):
         self.assertTrue(isinstance(u,User))
         print('Test de crear usuario, exitoso')
         
+    def test_listar_usuarios(self):
+        '''
+         Test para ver si se listan correctamente los usuarios
+        '''
+        c = Client()
+        c.login(username='nabil', password='123')
+        resp = c.get('/usuario/listar_usuarios/', follow = True)
+        self.assertEqual(resp.status_code, 200)
+        print("Test de listado de usuarios exitoso")
 

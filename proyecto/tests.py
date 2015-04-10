@@ -1,4 +1,5 @@
 from django.test import TestCase
+from django.test import Client
 from proyecto.models import Proyecto
 from proyecto.forms import ProyectoModelForm
 from django.core.urlresolvers import reverse
@@ -60,3 +61,15 @@ class ProyectoTestCase(TestCase):
         response = self.client.post('/proyecto/', follow=True)
         self.assertRedirects(response, '/inicio/?next=/proyecto/')
         print("Test de restriccion de acceso a proyecto de un usuario anonimo exitoso")
+
+    def test_listar_proyectos(self):
+        '''
+         Test para ver si se listan correctamente los proyectos
+        '''
+        c = Client()
+        c.login(username='nabil', password='123')
+        resp = c.get('/proyecto/listar_proyectos/', follow = True)
+        self.assertEqual(resp.status_code, 200)
+        print("Test de listado de proyectos exitoso")
+        
+    

@@ -8,8 +8,7 @@ class InicioTestCase(TestCase):
     
     def setUp(self):
         """
-        Funcion que inicializa el test con Datos de Prueba sobre usuarios
-        sobre datos de la BD
+        Funcion que inicializa el test con Datos de Prueba
         """
         self.client = Client()
         self.username = 'admin'
@@ -23,7 +22,7 @@ class InicioTestCase(TestCase):
         """
         resp = self.client.get("/inicio/")
         self.assertEqual(resp.status_code, 200)
-        print('Test inicio exitoso')
+        print('Test inicio de la aplicacion exitoso')
         
  
     def test_login(self):
@@ -32,7 +31,7 @@ class InicioTestCase(TestCase):
         """  
         resp = self.client.get('/inicio/')
         self.assertEqual(resp.status_code, 200)
-        resp= self.client.post('/inicio/', {'username': 'nabil', 'password': '123'})
+        resp= self.client.post('/inicio/', {'username': 'nabil', 'password': '123'}, follow = True)
         self.assertEqual(resp.status_code, 200)
         print('Test login exitoso')
         

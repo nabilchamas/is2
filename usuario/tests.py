@@ -8,14 +8,16 @@ class UsuarioTestCase(TestCase):
     
     def setUp(self):
         """
-        Funcion que inicializa el test con Datos de Prueba sobre usuarios
+        Funcion que inicializa los datos para el test
         """
-        self.factory = RequestFactory
-        self.user =  User.objects.create_user(
-            username='admin', email='admin@doamin.com', password='admin')
-        
+        self.factory = RequestFactory        
         
     def test_crea_usuario(self):
+        
+        """
+            Test para verificar la correcta creacion de un usuario
+        """
+        
         u = User.objects.create_user('user1', 'user1@domain.com', 'user1')
         self.assertTrue(isinstance(u,User))
         print('Test de crear usuario, exitoso')

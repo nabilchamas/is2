@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
+
 from django.contrib.auth.decorators import login_required, permission_required
 
 from usuario.forms import UsuarioModelForm, CrearUsuarioModelForm
@@ -10,13 +11,13 @@ from usuario.forms import UsuarioModelForm, CrearUsuarioModelForm
 @login_required
 def menu_usuario(request):
     return render(request, 'usuario/menu_usuario.html')
-
+   
 @login_required
 @permission_required('auth.add_user')
 def crear_usuario(request):
     if request.method == 'GET':
         form = CrearUsuarioModelForm()
-
+   
     else:
         form = CrearUsuarioModelForm(request.POST)
 

@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'inicio',
     'perfil',
     'flujo',
+    'userstory',
 )
 
 MIDDLEWARE_CLASSES = (

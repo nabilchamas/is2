@@ -1,0 +1,26 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Administrar user story </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.userstory.add_userstory %}
+	<li>
+		<a href="{% url 'userstory:crear_userstory' %}"> Crear userstory </a>
+	</li></br>
+{% endif %}
+
+<li>
+	<a href="{% url 'userstory:listar_userstories' %}"> Listar userstories </a>
+</li></br>
+
+
+<a href="{% url 'inicio:menu' %}"> Menu principal </a>

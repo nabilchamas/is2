@@ -1,0 +1,32 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Lista de userstories </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% for userstory in lista_userstories %}
+
+<li>
+	{{ userstory.nombre }}
+	{% if perms.userstory.change_userstory %}
+		<a href="{% url 'userstory:modificar_userstory' userstory.id %}"> Modificar </a>
+	{% endif %}
+
+	{% if perms.userstory.delete_userstory %}
+		<a href="{% url 'userstory:eliminar_userstory' userstory.id %}"> Eliminar </a>
+	{% endif %}
+	</br></br>
+</li>
+
+{% endfor %}
+
+
+<a href="{% url 'userstory:menu_userstory' %}"> Administrar userstories </a>

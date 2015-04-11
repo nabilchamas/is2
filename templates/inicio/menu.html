@@ -36,4 +36,10 @@ body {
 </li></br>
 {% endif %}
 
+{% if perms.userstory %}
+<li>
+	<a href="{% url 'userstory:menu_userstory' %}"> Menu userstory </a>
+</li></br>
+{% endif %}
+
 

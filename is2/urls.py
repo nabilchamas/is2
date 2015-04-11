@@ -13,4 +13,5 @@ urlpatterns = patterns('',
     url(r'^inicio/', include('inicio.urls', namespace='inicio')),
     url(r'^perfil/', include('perfil.urls', namespace='perfil')),
     url(r'^flujo/', include('flujo.urls', namespace='flujo')),
+    url(r'^userstory/', include('userstory.urls', namespace='userstory')),
 )

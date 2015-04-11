@@ -1,6 +1,6 @@
 from django.db import models
 from proyecto.models import Proyecto
-from flujo.models import Actividad
+from flujo.models import Flujo, Actividad
 
 class UserStory(models.Model):
 	ESTADOS = (
@@ -11,6 +11,7 @@ class UserStory(models.Model):
 
 	nombre = models.CharField(max_length=200)
 	proyecto = models.ForeignKey(Proyecto)
+	flujo = models.ForeignKey(Flujo, null=True)
 	actividad = models.ForeignKey(Actividad)
 	estado = models.CharField(max_length=200, choices=ESTADOS)
 

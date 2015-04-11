@@ -29,8 +29,37 @@ body {
 		{% endfor %}
 	</tr>
 
+	{% for userstory in flujo.userstory_set.all %}
+		<tr align="center">
+			{% for actividad in lista_actividades %}
+				{% if userstory.actividad == actividad %}
+					{% if userstory.estado == "Todo" %}
+						<td>{{userstory.nombre}}</td>
+						<td></td>
+						<td></td>
+					{% elif userstory.estado == "Doing" %}
+						<td></td>
+						<td>{{userstory.nombre}}</td>
+						<td></td>
+					{% else %}
+						<td></td>
+						<td></td>
+						<td>{{userstory.nombre}}</td>
+					{% endif %}
+				{% else %}
+					<td></td>
+					<td></td>
+					<td></td>
+				{% endif %}
+			{% endfor %}
+		<tr>
+	{% endfor %}
+
+
 
 </table> 
+
+
 
 
 

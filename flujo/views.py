@@ -57,6 +57,14 @@ def listar_flujos(request):
 	context = {'lista_flujos':lista_flujos}
 	return render(request, 'flujo/listar_flujos.html', context)
 
+	
+
+def desplegar_flujo(request, flujo_id):
+	flujo = Flujo.objects.get(pk=flujo_id)
+	lista_actividades = Actividad.objects.filter(flujo=flujo)
+	context = {'flujo':flujo, 'lista_actividades':lista_actividades}
+	return render(request, 'flujo/desplegar_flujo.html', context)
+
 
 
 
@@ -112,11 +120,5 @@ def listar_actividades(request):
 	context = {'lista_actividades':lista_actividades}
 	return render(request, 'flujo/listar_actividades.html', context)
 
-
-def desplegar_flujo(request, flujo_id):
-	flujo = Flujo.objects.get(pk=flujo_id)
-	lista_actividades = Actividad.objects.filter(flujo=flujo)
-	context = {'flujo':flujo, 'lista_actividades':lista_actividades}
-	return render(request, 'flujo/desplegar_flujo.html', context)
 
 

@@ -1,0 +1,16 @@
+
+Esto seria el ABM de proyecto, con solo algunos campos en el modelo porque es solo mi version de prueba.
+
+La funcionalidad esta 100%. Faltarian solo:
+	1) Definir los demas campos y agregarlos al modelo (no tardaria mas que unos minutos una vez definidos los demas campos del modelo)
+	2) Ver entorno grafico (una opcion seria Bootstrap, todavia no me dedique tiempo a eso ya que no lo veo urgente ya que nos falta resolver adm de usuario, perfiles y pruebas que son primordiales)
+	3) Adm de usuario y perfil
+	4) Pruebas
+	5) Integrar todo
+
+Para hacer funcionar el proyecto:
+	1) Hacer migrate etc
+	2) Crear super usuario
+	3) localhost:8000/proyecto/
+
+Luego seguir el menu de acuerdo a lo que uno desea.

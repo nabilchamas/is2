@@ -127,7 +127,7 @@ def modificar_usuario(request, usuario_id):
 def eliminar_usuario(request, usuario_id):
     usuario = User.objects.get(pk=usuario_id)
     usuario.delete()
-    return render(request, 'usuario/eliminar_usuario.html')
+    return HttpResponseRedirect(reverse('usuario:listar_usuarios'))
 
 @login_required
 def listar_usuarios(request):

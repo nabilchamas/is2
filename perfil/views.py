@@ -47,7 +47,7 @@ def modificar_perfil(request, perfil_id):
 def eliminar_perfil(request, perfil_id):
 	perfil = Group.objects.get(pk=perfil_id)
 	perfil.delete()
-	return render(request, 'perfil/eliminar_perfil.html')
+	return HttpResponseRedirect(reverse('perfil:listar_perfiles'))
 
 
 @login_required

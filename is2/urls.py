@@ -12,4 +12,5 @@ urlpatterns = patterns('',
     url(r'^usuario/', include('usuario.urls', namespace='usuario')),
     url(r'^inicio/', include('inicio.urls', namespace='inicio')),
     url(r'^perfil/', include('perfil.urls', namespace='perfil')),
+    url(r'^flujo/', include('flujo.urls', namespace='flujo')),
 )

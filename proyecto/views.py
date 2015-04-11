@@ -77,7 +77,7 @@ def modificar_proyecto(request, proyecto_id):
 def eliminar_proyecto(request, proyecto_id):
     proyecto = Proyecto.objects.get(pk=proyecto_id)
     proyecto.delete()
-    return render(request, 'proyecto/eliminar_proyecto.html')
+    return HttpResponseRedirect(reverse('proyecto:listar_proyectos'))
 
 @login_required
 def listar_proyectos(request):

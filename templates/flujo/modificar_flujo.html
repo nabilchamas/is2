@@ -7,13 +7,13 @@ body {
 
 <table style="width:100%">
   <tr>
-    <td><h2> Modificar proyecto </h2></td>
+    <td><h2> Modificar flujo </h2></td>
     <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
   </tr>
 </table> 
 
-<form action="{% url 'proyecto:modificar_proyecto' proyecto_id %}" method="post">
+<form action="{% url 'flujo:modificar_flujo' flujo_id %}" method="post">
 	{% csrf_token %}
 	{{ form.as_p }}
-	<input type='submit' value='Modificar proyecto' />
+	<input type='submit' value='Modificar flujo' />
 </form>

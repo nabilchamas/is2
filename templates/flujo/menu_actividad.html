@@ -1,0 +1,26 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Administrar actividades </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.flujo.add_actividad %}
+	<li>
+		<a href="{% url 'flujo:crear_actividad' %}"> Crear actividad </a>
+	</li></br>
+{% endif %}
+
+<li>
+	<a href="{% url 'flujo:listar_actividades' %}"> Listar actividades </a>
+</li></br>
+
+
+
+<a href="{% url 'flujo:menu_flujo' %}"> Menu flujo </a>

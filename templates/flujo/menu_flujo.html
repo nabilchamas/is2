@@ -1,25 +1,28 @@
+
 <style>
 body {
     	background-color: #CCFFFF;
 	}
 </style>
 
+
 <table style="width:100%">
   <tr>
-    <td><h2> Administrar Perfiles </h2></td>
+    <td><h2> Administrar flujos </h2></td>
     <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
   </tr>
 </table> 
 
-{% if perms.auth.add_group %}
+{% if perms.flujo.add_flujo %}
 	<li>
-		<a href="{% url 'perfil:crear_perfil' %}"> Crear perfil </a>
+		<a href="{% url 'flujo:crear_flujo' %}"> Crear flujo </a>
 	</li></br>
 {% endif %}
 
 <li>
-	<a href="{% url 'perfil:listar_perfiles' %}"> Listar perfiles </a>
+	<a href="{% url 'flujo:listar_flujos' %}"> Listar flujos </a>
 </li></br>
 
 
+<a href="{% url 'flujo:menu_actividad' %}"> Menu actividad </a></br></br>
 <a href="{% url 'inicio:menu' %}"> Menu principal </a>

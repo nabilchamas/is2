@@ -1,0 +1,38 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+<table style="width:100%">
+  <tr>
+    <td><h2></h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+<h2 align="center"> Flujo: {{ flujo.nombre }} </h2>
+ <table border=1 style="background-color: #f1f1c1; width:100%">
+	
+
+	<tr align="center">
+		{% for actividad in lista_actividades %}
+			<td colspan="3">{{ actividad.nombre }}</td>
+		{% endfor %}
+	</tr>
+
+	<tr align="center">
+		{% for actividad in lista_actividades %}
+			<td >To do</td>
+			<td>Doing</td>
+			<td>Done</td>
+		{% endfor %}
+	</tr>
+</table> 
+
+
+
+</br></br></br></br></br></br>
+<li>
+	<a href="{% url 'flujo:listar_flujos' %}"> Listar flujos </a>
+</li>

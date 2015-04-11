@@ -1,0 +1,32 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Lista de flujos </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% for flujo in lista_flujos %}
+
+<li>
+	<a href="{% url 'flujo:desplegar_flujo' flujo.id %}"> {{ flujo.nombre }} </a>
+
+	{% if perms.flujo.change_flujo %}
+		<a href="{% url 'flujo:modificar_flujo' flujo.id %}"> Modificar </a>
+	{% endif %}
+
+	{% if perms.flujo.delete_flujo %}
+		<a href="{% url 'flujo:eliminar_flujo' flujo.id %}"> Eliminar </a>
+	{% endif %}
+	</br></br>
+</li>
+
+{% endfor %}
+
+
+<a href="{% url 'flujo:menu_flujo' %}"> Administrar flujos </a>

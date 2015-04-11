@@ -1,4 +1,10 @@
 
+<style>
+body {
+    	background-color: #CCFF99;
+	}
+</style>
+
 <table style="width:100%">
   <tr>
     <td><h2> Menu </h2></td>
@@ -24,5 +30,10 @@
 </li></br>
 {% endif %}
 
+{% if perms.flujo %}
+<li>
+	<a href="{% url 'flujo:menu_flujo' %}"> Menu flujo </a>
+</li></br>
+{% endif %}
 
 

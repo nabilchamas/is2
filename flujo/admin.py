@@ -1,3 +1,5 @@
 from django.contrib import admin
+from flujo.models import Flujo, Actividad
 
-# Register your models here.
+admin.site.register(Flujo)
+admin.site.register(Actividad)

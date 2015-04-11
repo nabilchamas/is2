@@ -9,17 +9,17 @@ from proyecto.forms import ProyectoModelForm
 
 @login_required
 def menu_proyecto(request):
-    """
+    '''
         Sirve para acceder al menu de proyecto
-    """
+    '''
     return render(request, 'proyecto/menu_proyecto.html')
 
 @login_required
 @permission_required('proyecto.add_proyecto')
 def crear_proyecto(request):
-    """
+    '''
         Crea un nuevo proyecto
-    """
+    '''
     if request.method == 'GET':
         form = ProyectoModelForm()
 

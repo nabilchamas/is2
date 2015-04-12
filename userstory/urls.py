@@ -18,4 +18,7 @@ urlpatterns = patterns('',
 		# ej: userstory/listar_userstories
 		url(r'^listar_userstories/', views.listar_userstories, name='listar_userstories'),
 
+		# ej: userstory/modificar_en_flujo/3
+		url(r'^modificar_en_flujo/(?P<userstory_id>\d+)/$', views.modificar_en_flujo, name='modificar_en_flujo'),
+
 	)

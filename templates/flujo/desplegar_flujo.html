@@ -34,17 +34,23 @@ body {
 			{% for actividad in lista_actividades %}
 				{% if userstory.actividad == actividad %}
 					{% if userstory.estado == "Todo" %}
-						<td>{{userstory.nombre}}</td>
+						<td>
+							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+						</td>
 						<td></td>
 						<td></td>
 					{% elif userstory.estado == "Doing" %}
 						<td></td>
-						<td>{{userstory.nombre}}</td>
+						<td>
+							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+						</td>
 						<td></td>
 					{% else %}
 						<td></td>
 						<td></td>
-						<td>{{userstory.nombre}}</td>
+						<td>
+							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+						</td>
 					{% endif %}
 				{% else %}
 					<td></td>

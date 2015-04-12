@@ -51,6 +51,28 @@ def modificar_userstory(request, userstory_id):
 
 
 
+def modificar_en_flujo(request, userstory_id):
+    '''
+        Modifica un userstory seleccionado desde el desplegue de flujo 
+    '''
+
+    userstory = UserStory.objects.get(pk=userstory_id)
+    flujo = userstory.flujo
+    form = UserStoryModelForm(instance=userstory)
+
+    if request.method=='POST':
+        form = UserStoryModelForm(request.POST, instance=userstory)
+
+        if form.is_valid():
+            form.save()
+            context = {'flujo_id':flujo.id}
+            return HttpResponseRedirect(reverse('flujo:desplegar_flujo', kwargs=context))
+
+    context = {'form':form, 'userstory_id':userstory_id}
+    return render(request, 'userstory/modificar_en_flujo.html', context)
+
+
+
 
 
 

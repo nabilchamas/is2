@@ -21,7 +21,9 @@ body {
 	{% endif %}
 
 	{% if perms.userstory.delete_userstory %}
-		<a href="{% url 'userstory:eliminar_userstory' userstory.id %}"> Eliminar </a>
+		<a href="{% url 'userstory:eliminar_userstory' userstory.id %}"
+			onClick="return confirm('Desea eliminar el userstory: {{userstory.nombre}}?')"> Eliminar 
+		</a>
 	{% endif %}
 	</br></br>
 </li>

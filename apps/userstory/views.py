@@ -2,8 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
-from userstory.models import UserStory
-from userstory.forms import UserStoryModelForm
+from apps.userstory.models import UserStory
+from apps.userstory.forms import UserStoryModelForm
 
 
 def menu_userstory(request):

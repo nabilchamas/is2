@@ -1,5 +1,5 @@
 from django.db import models
-from proyecto.models import Proyecto
+from apps.proyecto.models import Proyecto
 
 class Flujo(models.Model):
 	nombre = models.CharField(max_length=200)

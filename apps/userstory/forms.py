@@ -1,4 +1,4 @@
-from userstory.models import UserStory
+from apps.userstory.models import UserStory
 from django import forms
 
 class UserStoryModelForm(forms.ModelForm):

@@ -1,7 +1,7 @@
 from django.test import TestCase
 from django.test import Client
-from proyecto.models import Proyecto
-from proyecto.forms import ProyectoModelForm
+from apps.proyecto.models import Proyecto
+from apps.proyecto.forms import ProyectoModelForm
 from django.core.urlresolvers import reverse
 from django.contrib.auth.models import User, Group
 

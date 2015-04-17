@@ -1,5 +1,5 @@
 from django.conf.urls import patterns, url
-from flujo import views
+from apps.flujo import views
 
 urlpatterns = patterns('',
 

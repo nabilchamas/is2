@@ -5,7 +5,7 @@ from django.contrib.auth.models import Group
 
 from django.contrib.auth.decorators import login_required, permission_required
 
-from perfil.forms import PerfilModelForm
+from apps.perfil.forms import PerfilModelForm
 
 @login_required
 def menu_perfil(request):

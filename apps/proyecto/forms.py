@@ -1,4 +1,4 @@
-from proyecto.models import Proyecto
+from apps.proyecto.models import Proyecto
 from django import forms
 
 class ProyectoModelForm(forms.ModelForm):

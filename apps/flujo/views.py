@@ -5,8 +5,8 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required, permission_required
 
 
-from flujo.models import Flujo, Actividad
-from flujo.forms import FlujoModelForm, ActividadModelForm
+from apps.flujo.models import Flujo, Actividad
+from apps.flujo.forms import FlujoModelForm, ActividadModelForm
 
 
 @login_required

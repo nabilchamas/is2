@@ -6,7 +6,7 @@ from django.core.urlresolvers import reverse
 
 from django.contrib.auth.decorators import login_required, permission_required
 
-from usuario.forms import UsuarioModelForm, CrearUsuarioModelForm
+from apps.usuario.forms import UsuarioModelForm, CrearUsuarioModelForm
 
 @login_required
 def menu_usuario(request):

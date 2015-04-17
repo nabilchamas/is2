@@ -1,6 +1,6 @@
 from django.db import models
-from proyecto.models import Proyecto
-from flujo.models import Flujo, Actividad
+from apps.proyecto.models import Proyecto
+from apps.flujo.models import Flujo, Actividad
 
 class UserStory(models.Model):
 	ESTADOS = (

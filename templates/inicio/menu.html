@@ -36,10 +36,18 @@ body {
 </li></br>
 {% endif %}
 
+{% if perms.sprint %}
+<li>
+	<a href="{% url 'sprint:menu_sprint' %}"> Menu sprint </a>
+</li></br>
+{% endif %}
+
 {% if perms.userstory %}
 <li>
 	<a href="{% url 'userstory:menu_userstory' %}"> Menu userstory </a>
 </li></br>
 {% endif %}
+
+
 
 

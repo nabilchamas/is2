@@ -1,0 +1,26 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Administrar sprint </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% if perms.sprint.add_sprint %}
+	<li>
+		<a href="{% url 'sprint:crear_sprint' %}"> Crear sprint </a>
+	</li></br>
+{% endif %}
+
+<li>
+	<a href="{% url 'sprint:listar_sprints' %}"> Listar sprints </a>
+</li></br>
+
+
+<a href="{% url 'inicio:menu' %}"> Menu principal </a>

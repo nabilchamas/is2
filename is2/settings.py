@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'apps.perfil',
     'apps.flujo',
     'apps.userstory',
+    'apps.sprint',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -64,30 +65,30 @@ WSGI_APPLICATION = 'is2.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 #desarrollo
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-#produccion
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'is2_produccion',                      
-        'USER': 'nabil',
-        'PASSWORD': 'nabil',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+#produccion
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'is2_produccion',                      
+#         'USER': 'nabil',
+#         'PASSWORD': 'nabil',
+#         'HOST': '127.0.0.1',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Asuncion'
 
 USE_I18N = True
 

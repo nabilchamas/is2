@@ -23,12 +23,49 @@ body {
 
 	<tr align="center">
 		{% for actividad in lista_actividades %}
-			<td >To do</td>
+			<td>To do</td>
 			<td>Doing</td>
 			<td>Done</td>
 		{% endfor %}
 	</tr>
+
+	{% for userstory in flujo.userstory_set.all %}
+		<tr align="center">
+			{% for actividad in lista_actividades %}
+				{% if userstory.actividad == actividad %}
+					{% if userstory.estado == "Todo" %}
+						<td>
+							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+						</td>
+						<td></td>
+						<td></td>
+					{% elif userstory.estado == "Doing" %}
+						<td></td>
+						<td>
+							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+						</td>
+						<td></td>
+					{% else %}
+						<td></td>
+						<td></td>
+						<td>
+							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+						</td>
+					{% endif %}
+				{% else %}
+					<td></td>
+					<td></td>
+					<td></td>
+				{% endif %}
+			{% endfor %}
+		<tr>
+	{% endfor %}
+
+
+
 </table> 
+
+
 
 
 

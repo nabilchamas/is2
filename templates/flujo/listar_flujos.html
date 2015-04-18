@@ -21,7 +21,9 @@ body {
 	{% endif %}
 
 	{% if perms.flujo.delete_flujo %}
-		<a href="{% url 'flujo:eliminar_flujo' flujo.id %}"> Eliminar </a>
+		<a href="{% url 'flujo:eliminar_flujo' flujo.id %}"
+			onClick="return confirm('Desea eliminar el flujo: {{flujo.nombre}}?')"> Eliminar 
+		</a>
 	{% endif %}
 	</br></br>
 </li>

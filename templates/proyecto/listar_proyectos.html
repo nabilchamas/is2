@@ -21,7 +21,9 @@ body {
 	{% endif %}
 
 	{% if perms.proyecto.delete_proyecto %}
-		<a href="{% url 'proyecto:eliminar_proyecto' proyecto.id %}"> Eliminar </a>
+		<a href="{% url 'proyecto:eliminar_proyecto' proyecto.id %}"
+			onClick="return confirm('Desea eliminar el proyecto: {{proyecto.nombre}}?')"> Eliminar 
+		</a>
 	{% endif %}
 	</br></br>
 </li>

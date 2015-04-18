@@ -20,7 +20,9 @@ body {
 	{% endif %}
 
 	{% if perms.auth.delete_user %}
-		<a href="{% url 'usuario:eliminar_usuario' usuario.id %}"> Eliminar </a>
+		<a href="{% url 'usuario:eliminar_usuario' usuario.id %}"
+			onClick="return confirm('Desea eliminar el usuario: {{usuario.username}}?')"> Eliminar 
+		</a>
 	{% endif %}
 </br></br>
 </li>

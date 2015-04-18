@@ -1,0 +1,34 @@
+<style>
+body {
+    	background-color: #CCFFFF;
+	}
+</style>
+
+
+<table style="width:100%">
+  <tr>
+    <td><h2> Lista de sprints </h2></td>
+    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+  </tr>
+</table> 
+
+{% for sprint in lista_sprints %}
+
+<li>
+	{{ sprint.nombre }}
+	{% if perms.sprint.change_sprint %}
+		<a href="{% url 'sprint:modificar_sprint' sprint.id %}"> Modificar </a>
+	{% endif %}
+
+	{% if perms.sprint.delete_sprint %}
+		<a href="{% url 'sprint:eliminar_sprint' sprint.id %}"
+			onClick="return confirm('Desea eliminar el sprint: {{sprint.nombre}}?')"> Eliminar 
+		</a>
+	{% endif %}
+	</br></br>
+</li>
+
+{% endfor %}
+
+
+<a href="{% url 'sprint:menu_sprint' %}"> Administrar sprints </a>

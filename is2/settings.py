@@ -37,11 +37,13 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admindocs',
-    'proyecto',
-    'usuario',
-    'inicio',
-    'perfil',
-    'flujo',
+    'apps.proyecto',
+    'apps.usuario',
+    'apps.inicio',
+    'apps.perfil',
+    'apps.flujo',
+    'apps.userstory',
+    'apps.sprint',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -62,6 +64,7 @@ WSGI_APPLICATION = 'is2.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
+#desarrollo
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
@@ -69,12 +72,23 @@ DATABASES = {
     }
 }
 
+#produccion
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'is2_produccion',                      
+#         'USER': 'nabil',
+#         'PASSWORD': 'nabil',
+#         'HOST': '127.0.0.1',
+#     }
+# }
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-PY'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Asuncion'
 
 USE_I18N = True
 
@@ -91,3 +105,11 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/inicio/'
+
+
+# DATE_INPUT_FORMATS = ('%m/%d/%Y', '%m/%d/%y', '%Y-%m-%d',
+#                       '%b %d %Y', '%b %d, %Y', '%d %b %Y',
+#                       '%d %b, %Y', '%B %d %Y', '%B %d, %Y',
+#                       '%d %B %Y', '%d %B, %Y')
+# from django.conf.locale.en import formats
+# formats.DATE_INPUT_FORMATS = DATE_INPUT_FORMATS

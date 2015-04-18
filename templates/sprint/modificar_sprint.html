@@ -1,0 +1,40 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script>
+	$(function() {
+	$( ".datepicker" ).datepicker({dateFormat: "dd/mm/yy"});
+	});
+	</script>
+
+  	<style>
+	body {
+    	background-color: #CCFFFF;
+	}
+	</style>
+</head>
+<body>
+	<table style="width:100%">
+	  <tr>
+	    <td><h2> Modificar sprint </h2></td>
+	    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
+	  </tr>
+	</table> 
+
+	<form action="{% url 'sprint:modificar_sprint' sprint_id %}" method="post">
+		{% csrf_token %}
+		{{ form.as_p }}
+		<input type='submit' value='Modificar sprint' />
+	</form>
+</body>
+</html>
+
+
+
+
+
+

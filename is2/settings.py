@@ -86,7 +86,7 @@ DATABASES = {
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-PY'
 
 TIME_ZONE = 'America/Asuncion'
 
@@ -105,3 +105,11 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/inicio/'
+
+
+# DATE_INPUT_FORMATS = ('%m/%d/%Y', '%m/%d/%y', '%Y-%m-%d',
+#                       '%b %d %Y', '%b %d, %Y', '%d %b %Y',
+#                       '%d %b, %Y', '%B %d %Y', '%B %d, %Y',
+#                       '%d %B %Y', '%d %B, %Y')
+# from django.conf.locale.en import formats
+# formats.DATE_INPUT_FORMATS = DATE_INPUT_FORMATS

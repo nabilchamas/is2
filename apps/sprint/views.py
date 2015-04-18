@@ -47,7 +47,7 @@ def modificar_sprint(request, sprint_id):
 
 		if form.is_valid:
 			form.save()
-			return HttpResponseRedirect(reverse('sprint/listar_sprints.html'))
+			return HttpResponseRedirect(reverse('sprint:listar_sprints'))
 
 	context = {'form':form, 'sprint_id':sprint_id}
 	return render(request, 'sprint/modificar_sprint.html', context)

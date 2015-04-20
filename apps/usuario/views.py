@@ -43,7 +43,7 @@ def crear_usuario(request):
             for g in groups:
                 usuario.groups.add(g)
             usuario.save()
-            return HttpResponseRedirect(reverse('usuario:menu_usuario'))
+            return HttpResponseRedirect(reverse('usuario:listar_usuarios'))
 
     return render(request, 'usuario/crear_usuario.html', {'form':form})
 

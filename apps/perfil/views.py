@@ -22,7 +22,7 @@ def crear_perfil(request):
 
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect(reverse('perfil:menu_perfil'))
+			return HttpResponseRedirect(reverse('perfil:listar_perfiles'))
 
 	return render(request, 'perfil/crear_perfil.html', {'form':form})
 

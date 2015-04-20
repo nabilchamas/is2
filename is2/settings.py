@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'apps.flujo',
     'apps.userstory',
     'apps.sprint',
+    'bootstrapform',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -105,6 +106,10 @@ TEMPLATE_DIRS = [os.path.join(BASE_DIR, 'templates')]
 STATIC_URL = '/static/'
 
 LOGIN_URL = '/inicio/'
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
 
 
 # DATE_INPUT_FORMATS = ('%m/%d/%Y', '%m/%d/%y', '%Y-%m-%d',

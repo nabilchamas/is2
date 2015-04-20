@@ -25,9 +25,9 @@ def crear_sprint(request):
 	if request.method == 'POST':
 		form = SprintModelForm(request.POST)
 
-		if form.is_valid:
+		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect(reverse('sprint:menu_sprint'))
+			return HttpResponseRedirect(reverse('sprint:listar_sprints'))
 
 	form = SprintModelForm()
 	context = {'form':form}
@@ -45,7 +45,7 @@ def modificar_sprint(request, sprint_id):
 	if request.method == 'POST':
 		form = SprintModelForm(request.POST, instance=sprint)
 
-		if form.is_valid:
+		if form.is_valid():
 			form.save()
 			return HttpResponseRedirect(reverse('sprint:listar_sprints'))
 
@@ -62,7 +62,7 @@ def eliminar_sprint(request, sprint_id):
 	'''
 	sprint = Sprint.objects.get(pk=sprint_id)
 	sprint.delete()
-	return HttpResponseRedirect(reverse('sprint/listar_sprints.html'))
+	return HttpResponseRedirect(reverse('sprint:listar_sprints'))
 
 
 

@@ -39,7 +39,7 @@ def crear_proyecto(request):
                 cliente = cliente
                 )
             proyecto.save()
-            return HttpResponseRedirect(reverse('proyecto:menu_proyecto'))
+            return HttpResponseRedirect(reverse('proyecto:listar_proyectos'))
 
     return render(request, 'proyecto/crear_proyecto.html', {'form':form})
 

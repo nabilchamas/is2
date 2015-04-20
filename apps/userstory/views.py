@@ -22,9 +22,9 @@ def crear_userstory(request):
     if request.method == 'POST':
         form = UserStoryModelForm(request.POST)
 
-        if form.is_valid:
+        if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('userstory:menu_userstory'))
+            return HttpResponseRedirect(reverse('userstory:listar_userstories'))
 
     form = UserStoryModelForm()
     context = {'form':form}

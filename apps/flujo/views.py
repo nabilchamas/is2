@@ -23,7 +23,7 @@ def crear_flujo(request):
 
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect(reverse('flujo:menu_flujo'))
+			return HttpResponseRedirect(reverse('flujo:listar_flujos'))
 
 	return render(request, 'flujo/crear_flujo.html', {'form':form})
 
@@ -87,7 +87,7 @@ def crear_actividad(request):
 
 		if form.is_valid():
 			form.save()
-			return HttpResponseRedirect(reverse('flujo:menu_actividad'))
+			return HttpResponseRedirect(reverse('flujo:listar_actividades'))
 
 	return render(request, 'flujo/crear_actividad.html', {'form':form})
 

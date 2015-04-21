@@ -164,14 +164,26 @@
 
 
 <div class="col-sm-10">
-	<h3 align="center"> Modificar sprint </h3></br> 
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+      <h3 align="center"> Modificar sprint </h3></br> 
 
-	 <form action="{% url 'sprint:modificar_sprint' sprint_id %}" method="post">
-	 	{% csrf_token %}
-	 	{{ form.as_p }}
+      <form action="{% url 'sprint:modificar_sprint' sprint_id %}" method="post">
+        {% csrf_token %}
+        {% load bootstrap %}
+        {{ form|bootstrap }}
 
-	 	<input class="btn btn-primary" type='submit' value='Modificar sprint' />
-	 </form>
+        <input class="btn btn-primary" type='submit' value='Modificar sprint' />
+      </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+
+
+
+	
 </div>
 
 

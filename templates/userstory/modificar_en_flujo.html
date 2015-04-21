@@ -113,13 +113,22 @@
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Modificar user story</h4>
+        <h4 class="modal-title" align="center">Modificar user story</h4>
       </div>
       <div class="modal-body">
-        <form action="{% url 'userstory:modificar_en_flujo' userstory_id %}" method="post" id="myform">
-          {% csrf_token %}
-          {{ form.as_p }}
-        </form>
+        <div class="row">
+          <div class="col-md-3"></div>
+          <div class="col-md-6">
+            <form action="{% url 'userstory:modificar_en_flujo' userstory_id %}" method="post" id="myform">
+              {% csrf_token %}
+              {% load bootstrap %}
+              {{ form|bootstrap }}
+            </form>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+
+        
       </div>
       <div class="modal-footer">
         <input class="btn btn-primary" type='submit' value='Guardar' form="myform" />

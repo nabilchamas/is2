@@ -158,13 +158,23 @@
 
 
 <div class="col-sm-10">
-	<h3 align="center"> Modificar perfil </h3></br> 
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+        <h3 align="center"> Modificar perfil </h3></br> 
 
-	<form action="{% url 'perfil:modificar_perfil' perfil_id %}" method="post">
-	 	{% csrf_token %}
-	 	{{ form.as_p }}
-	 	<input class="btn btn-primary" type='submit' value='Modificar perfil' />
-	 </form>
+        <form action="{% url 'perfil:modificar_perfil' perfil_id %}" method="post">
+          {% csrf_token %}
+          {% load bootstrap %}
+          {{ form|bootstrap }}
+          <input class="btn btn-primary" type='submit' value='Modificar perfil' />
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+
+	
 </div>
 
 

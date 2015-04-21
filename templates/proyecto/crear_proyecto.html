@@ -163,13 +163,25 @@
 
 
 <div class="col-sm-10">
-	<h3 align="center"> Crear proyecto </h3></br> 
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+        <h3 align="center"> Crear proyecto </h3></br> 
 
-	<form action="{% url 'proyecto:crear_proyecto' %}" method="post">
-		{% csrf_token %}
-		{{ form.as_p }}
-		<input class="btn btn-primary" type='submit' value='Crear proyecto' />
-	</form>
+        <form action="{% url 'proyecto:crear_proyecto' %}" method="post">
+          {% csrf_token %}
+          {% load bootstrap %}
+          {{ form|bootstrap }}
+          <input class="btn btn-primary" type='submit' value='Crear proyecto' />
+        </form>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+
+
+
+
+	
 </div>
 
 

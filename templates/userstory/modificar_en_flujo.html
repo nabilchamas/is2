@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
 
+    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -38,139 +40,97 @@
 
 
 
-
- <div class="row">
-    <div class="col-sm-2">
-
-  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingOne">
-      <h4 class="panel-title">
-        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-          Usuario
-        </a>
-      </h4>
-    </div>
-    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-      <!-- <div class="panel-body">
-        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
-      </div> -->
-      <div class="list-group">
-        <li><a href="{% url 'usuario:crear_usuario' %}" class="list-group-item">Crear usuario</a></li>
-        <li><a href="{% url 'usuario:listar_usuarios' %}" class="list-group-item">Listar usuarios</a></li>
-      </div>
+<h2 align="center"> Flujo: {{ flujo.nombre }} </h2>
 
 
-    </div>
-  </div>
+<div class="container">
+ <table class="table table-striped table-bordered table-hover">
+  
 
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingTwo">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-          Perfil
-        </a>
-      </h4>
-    </div>
-    <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-      <div class="list-group">
-        <li><a href="{% url 'perfil:crear_perfil' %}" class="list-group-item">Crear perfil</a></li>
-        <li><a href="{% url 'perfil:listar_perfiles' %}" class="list-group-item">Listar perfiles</a></li>
-      </div>
-    </div>
-  </div>
+  <tr align="center">
+    {% for actividad in lista_actividades %}
+      <td colspan="3">{{ actividad.nombre }}</td>
+    {% endfor %}
+  </tr>
 
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-          Proyecto
-        </a>
-      </h4>
-    </div>
-    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="list-group">
-        <li><a href="{% url 'proyecto:crear_proyecto' %}" class="list-group-item">Crear proyecto</a></li>
-        <li><a href="{% url 'proyecto:listar_proyectos' %}" class="list-group-item">Listar proyectos</a></li>
-      </div>
-    </div>
-  </div>
+  <tr align="center">
+    {% for actividad in lista_actividades %}
+      <td>To do</td>
+      <td>Doing</td>
+      <td>Done</td>
+    {% endfor %}
+  </tr>
 
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#cuatro" aria-expanded="false" aria-controls="cuatro">
-          Flujo
-        </a>
-      </h4>
-    </div>
-    <div id="cuatro" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="list-group">
-        <li><a href="{% url 'flujo:crear_flujo' %}" class="list-group-item">Crear flujo</a></li>
-        <li><a href="{% url 'flujo:listar_flujos' %}" class="list-group-item">Listar flujos</a></li>
-        <li><a href="{% url 'flujo:crear_actividad' %}" class="list-group-item">Crear actividad</a></li>
-        <li><a href="{% url 'flujo:listar_actividades' %}" class="list-group-item">Listar actividades</a></li>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#cinco" aria-expanded="false" aria-controls="cinco">
-          Sprint
-        </a>
-      </h4>
-    </div>
-    <div id="cinco" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-      <div class="list-group">
-        <li><a href="{% url 'sprint:crear_sprint' %}" class="list-group-item">Crear sprint</a></li>
-        <li><a href="{% url 'sprint:listar_sprints' %}" class="list-group-item">Listar sprints</a></li>
-      </div>
-    </div>
-  </div>
-
-  <div class="panel panel-default">
-    <div class="panel-heading" role="tab" id="headingThree">
-      <h4 class="panel-title">
-        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#seis" aria-expanded="false" aria-controls="seis">
-          User Story
-        </a>
-      </h4>
-    </div>
-    <div id="seis" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingThree">
-      <div class="list-group">
-        <li><a href="{% url 'userstory:crear_userstory' %}" class="list-group-item">Crear user story</a></li>
-        <li><a href="{% url 'userstory:listar_userstories' %}" class="list-group-item active">Listar user stories</a></li>
-      </div>
-    </div>
-  </div>
+  {% for userstory in flujo.userstory_set.all %}
+    <tr align="center">
+      {% for actividad in lista_actividades %}
+        {% if userstory.actividad == actividad %}
+          {% if userstory.estado == "Todo" %}
+            <td>
+              <a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+            </td>
+            <td></td>
+            <td></td>
+          {% elif userstory.estado == "Doing" %}
+            <td></td>
+            <td>
+              <a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+            </td>
+            <td></td>
+          {% else %}
+            <td></td>
+            <td></td>
+            <td>
+              <a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+            </td>
+          {% endif %}
+        {% else %}
+          <td></td>
+          <td></td>
+          <td></td>
+        {% endif %}
+      {% endfor %}
+    <tr>
+  {% endfor %}
 
 
 
-</div>
-    
-
-
+</table> 
 </div>
 
 
 
-<div class="col-sm-10">
-	<h3 align="center"> Modificar user story </h3></br> 
 
-	 <form action="{% url 'userstory:modificar_en_flujo' userstory_id %}" method="post">
-	 	{% csrf_token %}
-	 	{{ form.as_p }}
+</br></br></br></br></br></br>
 
-	 	<input class="btn btn-primary" type='submit' value='Modificar user story' />
-	 </form>
+<div class="container">
+<a class="btn btn-primary" href="{% url 'flujo:listar_flujos' %}"> Listar flujos </a>
 </div>
 
 
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Modificar user story</h4>
+      </div>
+      <div class="modal-body">
+        <form action="{% url 'userstory:modificar_en_flujo' userstory_id %}" method="post" id="myform">
+          {% csrf_token %}
+          {{ form.as_p }}
+        </form>
+      </div>
+      <div class="modal-footer">
+        <input class="btn btn-primary" type='submit' value='Guardar' form="myform" />
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
 
-  </div>
+
+
 
 
 
@@ -178,8 +138,38 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+    <script type="text/javascript">
+      $(window).load(function(){
+          $('#myModal').modal('show');
+      });
+    </script>
   </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

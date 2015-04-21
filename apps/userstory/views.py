@@ -3,6 +3,7 @@ from django.http import HttpResponseRedirect
 from django.core.urlresolvers import reverse
 
 from apps.userstory.models import UserStory
+from apps.flujo.models import Flujo, Actividad
 from apps.userstory.forms import UserStoryModelForm
 
 
@@ -58,6 +59,7 @@ def modificar_en_flujo(request, userstory_id):
 
     userstory = UserStory.objects.get(pk=userstory_id)
     flujo = userstory.flujo
+    lista_actividades = Actividad.objects.filter(flujo=flujo)
     form = UserStoryModelForm(instance=userstory)
 
     if request.method=='POST':
@@ -68,7 +70,8 @@ def modificar_en_flujo(request, userstory_id):
             context = {'flujo_id':flujo.id}
             return HttpResponseRedirect(reverse('flujo:desplegar_flujo', kwargs=context))
 
-    context = {'form':form, 'userstory_id':userstory_id}
+    context = {'form':form, 'userstory_id':userstory_id, 
+            'flujo':flujo, 'lista_actividades':lista_actividades}
     return render(request, 'userstory/modificar_en_flujo.html', context)
 
 

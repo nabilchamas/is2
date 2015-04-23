@@ -91,11 +91,300 @@
 },
 {
   "fields": {
-    "expire_date": "2015-05-01T22:44:31.986Z",
-    "session_data": "MjcyNjMxOWI2ODBiY2IwODQ0ZDRhNzk5M2QyNDMyODIxNzExMTQ2MTp7Il9hdXRoX3VzZXJfaGFzaCI6IjBlOGFjYzE1ZjJkNGIxNTk2YjY3MjI1OGM5MTRhNDlkNjMzNDBmMzUiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+    "model": "sprint",
+    "name": "sprint",
+    "app_label": "sprint"
+  },
+  "model": "contenttypes.contenttype",
+  "pk": 11
+},
+{
+  "fields": {
+    "expire_date": "2015-04-24T01:34:15.479Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
   },
   "model": "sessions.session",
-  "pk": "me48kqxkkv065bul2wmic8hwduc5tdbt"
+  "pk": "7r60nf3735qi8bawzz5di53bfkz3f1x9"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-21T20:49:45.627Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "a7jyfh00j40ih4uw3v21ohw4rd7wd5sr"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-26T14:00:12.594Z",
+    "session_data": "YWY5MGM0YmRhMzgyYTM0YzUxZjIxM2I3NDZkMjMzYjNlZWZkY2ExMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjE2OTU5NWUxZDlhMDc5NTdmMmFmMGQ5NGI5NTE0YjYwZTZlZmQzYjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "aveb99hw3u51qhxgsoqobvjx5q96l82m"
+},
+{
+  "fields": {
+    "expire_date": "2015-05-06T01:12:00.343Z",
+    "session_data": "YWY5MGM0YmRhMzgyYTM0YzUxZjIxM2I3NDZkMjMzYjNlZWZkY2ExMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjE2OTU5NWUxZDlhMDc5NTdmMmFmMGQ5NGI5NTE0YjYwZTZlZmQzYjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "ax30w0vclxr5f2wn8wnh1rgmb9u59a7z"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-24T19:14:24.474Z",
+    "session_data": "NjQzODIwOGM3NTZiNjQzOTAwMjQ5NTRhMzRlMGRkODljMTczYjg5Yjp7Il9hdXRoX3VzZXJfaGFzaCI6ImE5YWJhMjAwZTdkZTAyZjJjM2IwODBmZWMyNmFmZWE2NmIzOTYwOWIiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "b7qet085ay5xmbfv03p94wirc5809qeg"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-24T17:31:48.980Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "bb5mkh5k4cyjtczkl0kh1pht8p1dspi5"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-25T14:19:21.238Z",
+    "session_data": "YWY5MGM0YmRhMzgyYTM0YzUxZjIxM2I3NDZkMjMzYjNlZWZkY2ExMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjE2OTU5NWUxZDlhMDc5NTdmMmFmMGQ5NGI5NTE0YjYwZTZlZmQzYjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "emkadsuqzaethqbecn5svil8lpg9c81v"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-22T18:27:49.403Z",
+    "session_data": "OTM2NTc5NjIwMDNiN2EwMzZhOTk1MDIyNTE0ZjlhNzQ0ZmU2ZWUxMjp7Il9hdXRoX3VzZXJfaGFzaCI6ImE2NWVmZDRiMDI1ZTE2MTRkN2YyNzA2NDEwNGE1NTRmNWRlNTM0ODYiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjMwfQ=="
+  },
+  "model": "sessions.session",
+  "pk": "fwl93g5pz4w0iyje8g9wi4m863euvqeq"
+},
+{
+  "fields": {
+    "expire_date": "2015-05-04T03:24:07.777Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "g90g7a90pqegok029o8urrhrkixravxh"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-21T19:07:54.481Z",
+    "session_data": "ZGYxZTUwNjUyNjY4MmYxMTg4ZGI3NzVkOTNhNTc2NzMxMjgzNjIyYjp7Il9hdXRoX3VzZXJfaGFzaCI6IjQ0YmFmZDg4MzU3YTIyOGZkN2E1YTFkMmJlODQ2MjYwMzdhNmFhNDAiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "j3f97xymavde7gi9dm3nemph10e13ngo"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-21T20:48:11.941Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "mdwqaxs3mss0uigm05b2qq6t0c6s8fd0"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-28T18:44:57.189Z",
+    "session_data": "YWY5MGM0YmRhMzgyYTM0YzUxZjIxM2I3NDZkMjMzYjNlZWZkY2ExMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjE2OTU5NWUxZDlhMDc5NTdmMmFmMGQ5NGI5NTE0YjYwZTZlZmQzYjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "p34o0jmh07z6sk96i3na5c0jo2dt39fx"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-25T02:58:51.324Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "qqvsuqqs7emih56qa8avn05drierop61"
+},
+{
+  "fields": {
+    "expire_date": "2015-04-24T17:28:28.603Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "quj3l43ol1m6j6kmgp9hzaeo4o1fyxzt"
+},
+{
+  "fields": {
+    "expire_date": "2015-05-01T22:31:58.888Z",
+    "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
+  },
+  "model": "sessions.session",
+  "pk": "z71edsnv4uezrj88l3npwjgtfeh6tdg0"
+},
+{
+  "fields": {
+    "fecha_fin": "2015-04-30",
+    "fecha_inicio": "2015-04-22",
+    "descripcion": "administrador de proyectos con metodologia scrum",
+    "nombre": "is2",
+    "codigo": 0,
+    "cliente": "profesora Carolina"
+  },
+  "model": "proyecto.proyecto",
+  "pk": 11
+},
+{
+  "fields": {
+    "fecha_fin": "2015-04-15",
+    "fecha_inicio": "2015-04-09",
+    "descripcion": "para aduana",
+    "nombre": "aduana",
+    "codigo": 6,
+    "cliente": "aduana"
+  },
+  "model": "proyecto.proyecto",
+  "pk": 12
+},
+{
+  "fields": {
+    "nombre": "inicio",
+    "proyecto": 11
+  },
+  "model": "flujo.flujo",
+  "pk": 5
+},
+{
+  "fields": {
+    "nombre": "nuevo",
+    "proyecto": 11
+  },
+  "model": "flujo.flujo",
+  "pk": 7
+},
+{
+  "fields": {
+    "nombre": "Act1",
+    "flujo": 5
+  },
+  "model": "flujo.actividad",
+  "pk": 12
+},
+{
+  "fields": {
+    "nombre": "Act3",
+    "flujo": 5
+  },
+  "model": "flujo.actividad",
+  "pk": 14
+},
+{
+  "fields": {
+    "nombre": "nuevano",
+    "flujo": 7
+  },
+  "model": "flujo.actividad",
+  "pk": 22
+},
+{
+  "fields": {
+    "nombre": "Act4",
+    "flujo": 5
+  },
+  "model": "flujo.actividad",
+  "pk": 25
+},
+{
+  "fields": {
+    "nombre": "Act5",
+    "flujo": 5
+  },
+  "model": "flujo.actividad",
+  "pk": 26
+},
+{
+  "fields": {
+    "nombre": "Act6",
+    "flujo": 5
+  },
+  "model": "flujo.actividad",
+  "pk": 27
+},
+{
+  "fields": {
+    "nombre": "otros",
+    "flujo": 7
+  },
+  "model": "flujo.actividad",
+  "pk": 28
+},
+{
+  "fields": {
+    "actividad": 12,
+    "proyecto": 11,
+    "nombre": "us1",
+    "sprint": 1,
+    "estado": "Doing",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 1
+},
+{
+  "fields": {
+    "actividad": 25,
+    "proyecto": 11,
+    "nombre": "us2",
+    "sprint": 2,
+    "estado": "Doing",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 2
+},
+{
+  "fields": {
+    "actividad": 25,
+    "proyecto": 11,
+    "nombre": "us3",
+    "sprint": 1,
+    "estado": "Todo",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 3
+},
+{
+  "fields": {
+    "actividad": 12,
+    "proyecto": 11,
+    "nombre": "us5",
+    "sprint": 1,
+    "estado": "Done",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 5
+},
+{
+  "fields": {
+    "fecha_fin": "2015-04-17",
+    "fecha_inicio": "2015-04-04",
+    "proyecto": 11,
+    "descripcion": "mi primer sprint",
+    "nombre": "sprint1",
+    "estado": "No activo"
+  },
+  "model": "sprint.sprint",
+  "pk": 1
+},
+{
+  "fields": {
+    "fecha_fin": "2015-06-03",
+    "fecha_inicio": "2015-04-29",
+    "proyecto": 11,
+    "descripcion": "mi segundo sprint",
+    "nombre": "sprint2",
+    "estado": "No activo"
+  },
+  "model": "sprint.sprint",
+  "pk": 2
 },
 {
   "fields": {
@@ -369,20 +658,641 @@
 },
 {
   "fields": {
+    "codename": "add_sprint",
+    "name": "Can add sprint",
+    "content_type": 11
+  },
+  "model": "auth.permission",
+  "pk": 31
+},
+{
+  "fields": {
+    "codename": "change_sprint",
+    "name": "Can change sprint",
+    "content_type": 11
+  },
+  "model": "auth.permission",
+  "pk": 32
+},
+{
+  "fields": {
+    "codename": "delete_sprint",
+    "name": "Can delete sprint",
+    "content_type": 11
+  },
+  "model": "auth.permission",
+  "pk": 33
+},
+{
+  "fields": {
+    "name": "ABM_perfil",
+    "permissions": [
+      7,
+      8,
+      9
+    ]
+  },
+  "model": "auth.group",
+  "pk": 15
+},
+{
+  "fields": {
+    "name": "A_usuario_B_perfil",
+    "permissions": [
+      9,
+      10
+    ]
+  },
+  "model": "auth.group",
+  "pk": 16
+},
+{
+  "fields": {
+    "name": "ninguno",
+    "permissions": []
+  },
+  "model": "auth.group",
+  "pk": 17
+},
+{
+  "fields": {
+    "name": "ABM_proyecto",
+    "permissions": [
+      19,
+      20,
+      21
+    ]
+  },
+  "model": "auth.group",
+  "pk": 19
+},
+{
+  "fields": {
+    "name": "nuevo",
+    "permissions": [
+      2
+    ]
+  },
+  "model": "auth.group",
+  "pk": 20
+},
+{
+  "fields": {
     "username": "nabil",
-    "first_name": "",
-    "last_name": "",
+    "first_name": "Nabil",
+    "last_name": "Chamas",
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
-    "last_login": "2015-04-17T22:44:31.974Z",
+    "last_login": "2015-04-22T01:12:00.150Z",
     "groups": [],
-    "user_permissions": [],
-    "password": "pbkdf2_sha256$12000$3S6G0wpK50yJ$YvLN3AdAebrFAnFqIHfb/WAV5nfRmq4JZKaZxYCZJCA=",
+    "user_permissions": [
+      1,
+      2,
+      3,
+      7,
+      8,
+      9,
+      4,
+      5,
+      6,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      19,
+      20,
+      21,
+      16,
+      17,
+      18
+    ],
+    "password": "pbkdf2_sha256$12000$O2rTYqGPgVA2$shPllSCXWHMcMDjfzcF7a6R4FB0Zt6/TS+tPOlb6d7Y=",
     "email": "",
-    "date_joined": "2015-04-17T22:44:00.031Z"
+    "date_joined": "2015-04-04T18:02:14Z"
   },
   "model": "auth.user",
   "pk": 1
+},
+{
+  "fields": {
+    "username": "miguel",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "last_login": "2015-04-19T05:19:59.460Z",
+    "groups": [
+      15
+    ],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$klHWTa8rYk5v$ARpMmJnxjSRCBsfIfF7Zs2ZOG6SOSVOGdf79o0IW7FM=",
+    "email": "",
+    "date_joined": "2015-04-19T05:19:59.460Z"
+  },
+  "model": "auth.user",
+  "pk": 36
+},
+{
+  "fields": {
+    "username": "carlos",
+    "first_name": "si",
+    "last_name": "no",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "last_login": "2015-04-19T15:07:54.355Z",
+    "groups": [
+      17
+    ],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$JIqODMyDIVrI$RzbRbjeOwFWfGInqUfqRplcDtAB23LDOeW6cw2g9DKM=",
+    "email": "",
+    "date_joined": "2015-04-19T15:07:54.355Z"
+  },
+  "model": "auth.user",
+  "pk": 37
+},
+{
+  "fields": {
+    "username": "anna",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "last_login": "2015-04-19T15:18:02.479Z",
+    "groups": [
+      16
+    ],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$AKYXEDpz3WW5$GUxJlaIZOooFM4iXs8Xi6kD4tig+ODSVEJ6VHrnNB6U=",
+    "email": "",
+    "date_joined": "2015-04-19T15:18:02.479Z"
+  },
+  "model": "auth.user",
+  "pk": 39
+},
+{
+  "fields": {
+    "username": "jose",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "last_login": "2015-04-19T15:37:42.133Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$HyktRcBOXjQY$w9XU4qfQb4dbcIH/08HJPdaK9Re420cZ+H5fiMn4vNE=",
+    "email": "",
+    "date_joined": "2015-04-19T15:37:42.133Z"
+  },
+  "model": "auth.user",
+  "pk": 40
+},
+{
+  "fields": {
+    "username": "angelo",
+    "first_name": "Angelo",
+    "last_name": "Britez",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "last_login": "2015-04-19T21:11:42.191Z",
+    "groups": [
+      19
+    ],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$TOQuG6APIKdQ$oxjog1Ob8yfF6JbSn8zxp8nD8jHxk/EILGw+R6sDJ7Y=",
+    "email": "angelo@britez.com",
+    "date_joined": "2015-04-19T21:09:53.587Z"
+  },
+  "model": "auth.user",
+  "pk": 41
+},
+{
+  "fields": {
+    "username": "marco",
+    "first_name": "",
+    "last_name": "",
+    "is_active": true,
+    "is_superuser": false,
+    "is_staff": true,
+    "last_login": "2015-04-20T01:05:58.822Z",
+    "groups": [],
+    "user_permissions": [],
+    "password": "pbkdf2_sha256$12000$asjB2pixQxMC$2vWb0EOOPWAlWyz/9zLdAu1ERg8uO7VV832OFUF2V34=",
+    "email": "",
+    "date_joined": "2015-04-20T01:05:23.168Z"
+  },
+  "model": "auth.user",
+  "pk": 42
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-05T04:55:32.184Z",
+    "object_repr": "is2",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 7
+  },
+  "model": "admin.logentry",
+  "pk": 1
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-05T04:59:26.170Z",
+    "object_repr": "is2",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 7
+  },
+  "model": "admin.logentry",
+  "pk": 2
+},
+{
+  "fields": {
+    "action_flag": 1,
+    "action_time": "2015-04-05T05:01:03.008Z",
+    "object_repr": "fds",
+    "object_id": "5",
+    "change_message": "",
+    "user": 1,
+    "content_type": 7
+  },
+  "model": "admin.logentry",
+  "pk": 3
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-07T18:40:54.325Z",
+    "object_repr": "juan",
+    "object_id": "6",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 4
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-07T18:40:54.471Z",
+    "object_repr": "miguel",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 5
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-07T18:40:54.639Z",
+    "object_repr": "no_es",
+    "object_id": "8",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 6
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-07T18:40:54.796Z",
+    "object_repr": "ss",
+    "object_id": "7",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 7
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2015-04-08T03:44:03.017Z",
+    "object_repr": "nabil",
+    "object_id": "1",
+    "change_message": "Changed user_permissions.",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 9
+},
+{
+  "fields": {
+    "action_flag": 2,
+    "action_time": "2015-04-08T14:20:45.495Z",
+    "object_repr": "usuario",
+    "object_id": "23",
+    "change_message": "Changed user_permissions.",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 12
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:05.236Z",
+    "object_repr": "ABM_perfil",
+    "object_id": "13",
+    "change_message": "",
+    "user": 1,
+    "content_type": 3
+  },
+  "model": "admin.logentry",
+  "pk": 15
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:05.431Z",
+    "object_repr": "ABM_proyecto",
+    "object_id": "12",
+    "change_message": "",
+    "user": 1,
+    "content_type": 3
+  },
+  "model": "admin.logentry",
+  "pk": 16
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:05.610Z",
+    "object_repr": "ABM_usuario",
+    "object_id": "10",
+    "change_message": "",
+    "user": 1,
+    "content_type": 3
+  },
+  "model": "admin.logentry",
+  "pk": 17
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:05.790Z",
+    "object_repr": "A_proyecto",
+    "object_id": "14",
+    "change_message": "",
+    "user": 1,
+    "content_type": 3
+  },
+  "model": "admin.logentry",
+  "pk": 18
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:05.969Z",
+    "object_repr": "Ninguno",
+    "object_id": "11",
+    "change_message": "",
+    "user": 1,
+    "content_type": 3
+  },
+  "model": "admin.logentry",
+  "pk": 19
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:16.823Z",
+    "object_repr": "ninguno",
+    "object_id": "26",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 20
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:17.059Z",
+    "object_repr": "perfil",
+    "object_id": "24",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 21
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:17.261Z",
+    "object_repr": "proyecto",
+    "object_id": "25",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 22
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-08T18:22:17.537Z",
+    "object_repr": "usuario",
+    "object_id": "23",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 23
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:05.159Z",
+    "object_repr": "A_flujo",
+    "object_id": "32",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 24
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:05.400Z",
+    "object_repr": "ninguno",
+    "object_id": "31",
+    "change_message": "",
+    "user": 1,
+    "content_type": 4
+  },
+  "model": "admin.logentry",
+  "pk": 25
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:43.186Z",
+    "object_repr": "Testing",
+    "object_id": "10",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 26
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:43.379Z",
+    "object_repr": "Desarrollo",
+    "object_id": "9",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 27
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:43.536Z",
+    "object_repr": "Analisis",
+    "object_id": "8",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 28
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:43.694Z",
+    "object_repr": "Testing",
+    "object_id": "5",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 29
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:45:43.851Z",
+    "object_repr": "Analisis",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 9
+  },
+  "model": "admin.logentry",
+  "pk": 30
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:46:20.770Z",
+    "object_repr": "is2",
+    "object_id": "4",
+    "change_message": "",
+    "user": 1,
+    "content_type": 8
+  },
+  "model": "admin.logentry",
+  "pk": 31
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:46:20.940Z",
+    "object_repr": "Tercer flujo",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 8
+  },
+  "model": "admin.logentry",
+  "pk": 32
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T12:46:36.438Z",
+    "object_repr": "is2",
+    "object_id": "1",
+    "change_message": "",
+    "user": 1,
+    "content_type": 7
+  },
+  "model": "admin.logentry",
+  "pk": 33
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T22:19:25.516Z",
+    "object_repr": "us3",
+    "object_id": "3",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 34
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T22:19:25.746Z",
+    "object_repr": "us2",
+    "object_id": "2",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 35
+},
+{
+  "fields": {
+    "action_flag": 3,
+    "action_time": "2015-04-11T22:19:26.003Z",
+    "object_repr": "us1",
+    "object_id": "1",
+    "change_message": "",
+    "user": 1,
+    "content_type": 10
+  },
+  "model": "admin.logentry",
+  "pk": 36
 }
 ]

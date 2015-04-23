@@ -1,32 +1,201 @@
-<style>
-body {
-    	background-color: #CCFFFF;
-	}
-</style>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Project manager</title>
 
-<table style="width:100%">
-  <tr>
-    <td><h2> Lista de perfiles </h2></td>
-    <td align="right"><a href="{% url 'inicio:salir' %}"> Logout </a></td>
-  </tr>
-</table>
+    <!-- Bootstrap -->
+    <link href="{{ STATIC_URL }}/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
-{% for perfil in lista_perfiles %}
 
-<li>
-	{{ perfil.name }}
-	{% if perms.auth.change_group %}
-		<a href="{% url 'perfil:modificar_perfil' perfil.id %}"> Modificar </a>
-	{% endif %}
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
 
-	{% if perms.auth.delete_group %}
-		<a href="{% url 'perfil:eliminar_perfil' perfil.id %}"
-			onClick="return confirm('Desea eliminar el perfil: {{perfil.name}}?')">Eliminar 
-		</a>
-	{% endif %}
-</br></br>
-</li>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="{% url 'inicio:menu' %}">Project Manager</a>
+    </div>
 
-{% endfor %}
 
-<a href="{% url 'perfil:menu_perfil' %}"> Administrar perfiles </a>
+
+    <div class="pull-right">
+      <ul class="nav navbar-nav">
+        <li><a href="{% url 'inicio:salir' %}">Logout</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+ <div class="row">
+    <div class="col-sm-2">
+
+  <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingOne">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+          Usuario
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+      <!-- <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div> -->
+      <div class="list-group">
+        <li><a href="{% url 'usuario:crear_usuario' %}" class="list-group-item">Crear usuario</a></li>
+        <li><a href="{% url 'usuario:listar_usuarios' %}" class="list-group-item">Listar usuarios</a></li>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingTwo">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+          Perfil
+        </a>
+      </h4>
+    </div>
+    <div id="collapseTwo" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingTwo">
+      <div class="list-group">
+        <li><a href="{% url 'perfil:crear_perfil' %}" class="list-group-item">Crear perfil</a></li>
+        <li><a href="{% url 'perfil:listar_perfiles' %}" class="list-group-item active">Listar perfiles</a></li>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+          Proyecto
+        </a>
+      </h4>
+    </div>
+    <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="list-group">
+        <li><a href="{% url 'proyecto:crear_proyecto' %}" class="list-group-item">Crear proyecto</a></li>
+        <li><a href="{% url 'proyecto:listar_proyectos' %}" class="list-group-item">Listar proyectos</a></li>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#cuatro" aria-expanded="false" aria-controls="cuatro">
+          Flujo
+        </a>
+      </h4>
+    </div>
+    <div id="cuatro" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="list-group">
+        <li><a href="{% url 'flujo:crear_flujo' %}" class="list-group-item">Crear flujo</a></li>
+        <li><a href="{% url 'flujo:listar_flujos' %}" class="list-group-item">Listar flujos</a></li>
+        <li><a href="{% url 'flujo:crear_actividad' %}" class="list-group-item">Crear actividad</a></li>
+        <li><a href="{% url 'flujo:listar_actividades' %}" class="list-group-item">Listar actividades</a></li>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#cinco" aria-expanded="false" aria-controls="cinco">
+          Sprint
+        </a>
+      </h4>
+    </div>
+    <div id="cinco" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="list-group">
+        <li><a href="{% url 'sprint:crear_sprint' %}" class="list-group-item">Crear sprint</a></li>
+        <li><a href="{% url 'sprint:listar_sprints' %}" class="list-group-item">Listar sprints</a></li>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="headingThree">
+      <h4 class="panel-title">
+        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#seis" aria-expanded="false" aria-controls="seis">
+          User Story
+        </a>
+      </h4>
+    </div>
+    <div id="seis" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+      <div class="list-group">
+        <li><a href="{% url 'userstory:crear_userstory' %}" class="list-group-item">Crear user story</a></li>
+        <li><a href="{% url 'userstory:listar_userstories' %}" class="list-group-item">Listar user stories</a></li>
+      </div>
+    </div>
+  </div>
+
+
+
+</div>
+</div>
+
+
+
+<div class="col-sm-10">
+	<h3 align="center"> Lista de perfiles </h3></br>
+
+	<table class="table text-center">
+		<tr class="text-center">
+			<td><b>Perfil</b></td>
+			<td><b>Modificar</b></td>
+			<td><b>Eliminar</b></td>
+		</tr>
+		{% for perfil in lista_perfiles %}
+		<tr>
+			<td>{{ perfil.name }}</td>
+			<td><a href="{% url 'perfil:modificar_perfil' perfil.id %}"><span class="glyphicon glyphicon-pencil"></span></a></td>
+			<td><a href="{% url 'perfil:eliminar_perfil' perfil.id %}"
+					onClick="return confirm('Desea eliminar el perfil: {{perfil.name}}?')"><span class="glyphicon glyphicon-remove"></span></a>
+			</td>
+		</tr>
+		{% endfor %}
+	</table>
+
+
+
+
+</div>
+
+
+
+
+  </div>
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="{{ STATIC_URL }}/jquery/jquery-1.11.2.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="{{ STATIC_URL }}/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
+
+
+
+
+
+

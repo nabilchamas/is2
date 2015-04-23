@@ -164,6 +164,7 @@
        <h3 align="center"> Modificar user story </h3></br> 
 
        <form action="{% url 'userstory:modificar_userstory' userstory_id %}" method="post">
+        {% csrf_token %}
         {% load bootstrap %}
         {{ form|bootstrap }}
 

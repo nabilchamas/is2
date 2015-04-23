@@ -10,6 +10,35 @@
     <!-- Bootstrap -->
     <link href="{{ STATIC_URL }}/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <style>
+    	.circulo-verde { 
+		   width: 30px;
+		   height: 30px;
+		   background: #75FF75; 
+		   -moz-border-radius: 70px; 
+		   -webkit-border-radius: 70px; 
+		   border-radius: 70px;
+		}
+
+		.circulo-amarillo { 
+		   width: 30px;
+		   height: 30px;
+		   background: #FFFF47; 
+		   -moz-border-radius: 70px; 
+		   -webkit-border-radius: 70px; 
+		   border-radius: 70px;
+		}
+
+		.circulo-rojo { 
+		   width: 30px;
+		   height: 30px;
+		   background: #FF704D; 
+		   -moz-border-radius: 70px; 
+		   -webkit-border-radius: 70px; 
+		   border-radius: 70px;
+		}
+	</style>
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -131,7 +160,7 @@
 					<td></td>
 				{% endif %}
 			{% endfor %}
-		<tr>
+		</tr>
 	{% endfor %}
 
 
@@ -142,11 +171,36 @@
 
 
 
-</br></br></br></br></br></br>
+</br></br></br></br>
 
 <div class="container">
-<a class="btn btn-primary" href="{% url 'flujo:listar_flujos' %}"> Listar flujos </a>
+	<div class="row">
+	  	<div class="col-md-8" align="left" style="top: 100px;">
+	  		<a class="btn btn-primary" href="{% url 'flujo:listar_flujos' %}"> Listar flujos </a>
+	  	</div>
+	  	<div class="col-md-4">
+	  		<table class="table">
+				<tr>
+					<td></td>
+					<td><div class="circulo-verde"></div></td>
+					<td style="vertical-align: middle;">Baja</td>
+				</tr>
+				<tr>
+					<td style="vertical-align: middle;"><b>Prioridad user story:</b></td>
+					<td><div class="circulo-amarillo"></div></td>
+					<td style="vertical-align: middle;">Media</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><div class="circulo-rojo"></div></td>
+					<td style="vertical-align: middle;">Alta</td>
+				</tr>
+			</table>
+	  	</div>
+	</div>
 </div>
+
+
 
 
 

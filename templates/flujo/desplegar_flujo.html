@@ -64,23 +64,66 @@
 			{% for actividad in lista_actividades %}
 				{% if userstory.actividad == actividad %}
 					{% if userstory.estado == "Todo" %}
-						<td>
-							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
-						</td>
+						{% if userstory.prioridad == "Baja" %}
+							<td bgcolor="#75FF75">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% elif userstory.prioridad == "Media" %}
+							<td bgcolor="#FFFF47">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% elif userstory.prioridad == "Alta" %}
+							<td bgcolor="#FF704D">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% else %}
+							<td>
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% endif %}
+
 						<td></td>
 						<td></td>
 					{% elif userstory.estado == "Doing" %}
 						<td></td>
-						<td>
-							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
-						</td>
+						{% if userstory.prioridad == "Baja" %}
+							<td bgcolor="#75FF75">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% elif userstory.prioridad == "Media" %}
+							<td bgcolor="#FFFF47">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% elif userstory.prioridad == "Alta" %}
+							<td bgcolor="#FF704D">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% else %}
+							<td>
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% endif %}
 						<td></td>
 					{% else %}
 						<td></td>
 						<td></td>
-						<td>
-							<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
-						</td>
+						{% if userstory.prioridad == "Baja" %}
+							<td bgcolor="#75FF75">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% elif userstory.prioridad == "Media" %}
+							<td bgcolor="#FFFF47">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% elif userstory.prioridad == "Alta" %}
+							<td bgcolor="#FF704D">
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% else %}
+							<td>
+								<a href="{% url 'userstory:modificar_en_flujo' userstory.id %}"> {{userstory.nombre}} </a>
+							</td>
+						{% endif %}
 					{% endif %}
 				{% else %}
 					<td></td>

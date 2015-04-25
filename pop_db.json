@@ -108,6 +108,14 @@
 },
 {
   "fields": {
+    "expire_date": "2015-05-09T01:42:09.909Z",
+    "session_data": "YWY5MGM0YmRhMzgyYTM0YzUxZjIxM2I3NDZkMjMzYjNlZWZkY2ExMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjE2OTU5NWUxZDlhMDc5NTdmMmFmMGQ5NGI5NTE0YjYwZTZlZmQzYjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "8hde2l1zmljk4y3vd37fr74mjy6lw980"
+},
+{
+  "fields": {
     "expire_date": "2015-04-21T20:49:45.627Z",
     "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
   },
@@ -153,6 +161,14 @@
   },
   "model": "sessions.session",
   "pk": "emkadsuqzaethqbecn5svil8lpg9c81v"
+},
+{
+  "fields": {
+    "expire_date": "2015-05-09T01:49:35.978Z",
+    "session_data": "YWY5MGM0YmRhMzgyYTM0YzUxZjIxM2I3NDZkMjMzYjNlZWZkY2ExMDp7Il9hdXRoX3VzZXJfaGFzaCI6IjE2OTU5NWUxZDlhMDc5NTdmMmFmMGQ5NGI5NTE0YjYwZTZlZmQzYjQiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "fd1el3ceiq82v6yc36nwbovakq163qpx"
 },
 {
   "fields": {
@@ -260,7 +276,7 @@
 },
 {
   "fields": {
-    "nombre": "Act1",
+    "nombre": "Analisis",
     "flujo": 5
   },
   "model": "flujo.actividad",
@@ -268,7 +284,7 @@
 },
 {
   "fields": {
-    "nombre": "Act3",
+    "nombre": "Disenho",
     "flujo": 5
   },
   "model": "flujo.actividad",
@@ -276,7 +292,7 @@
 },
 {
   "fields": {
-    "nombre": "nuevano",
+    "nombre": "Fin",
     "flujo": 7
   },
   "model": "flujo.actividad",
@@ -284,7 +300,7 @@
 },
 {
   "fields": {
-    "nombre": "Act4",
+    "nombre": "Programacion",
     "flujo": 5
   },
   "model": "flujo.actividad",
@@ -292,7 +308,7 @@
 },
 {
   "fields": {
-    "nombre": "Act5",
+    "nombre": "Testing",
     "flujo": 5
   },
   "model": "flujo.actividad",
@@ -300,7 +316,7 @@
 },
 {
   "fields": {
-    "nombre": "Act6",
+    "nombre": "Despliegue",
     "flujo": 5
   },
   "model": "flujo.actividad",
@@ -308,59 +324,11 @@
 },
 {
   "fields": {
-    "nombre": "otros",
+    "nombre": "Inicio",
     "flujo": 7
   },
   "model": "flujo.actividad",
   "pk": 28
-},
-{
-  "fields": {
-    "actividad": 12,
-    "proyecto": 11,
-    "nombre": "us1",
-    "sprint": 1,
-    "estado": "Doing",
-    "flujo": 5
-  },
-  "model": "userstory.userstory",
-  "pk": 1
-},
-{
-  "fields": {
-    "actividad": 25,
-    "proyecto": 11,
-    "nombre": "us2",
-    "sprint": 2,
-    "estado": "Doing",
-    "flujo": 5
-  },
-  "model": "userstory.userstory",
-  "pk": 2
-},
-{
-  "fields": {
-    "actividad": 25,
-    "proyecto": 11,
-    "nombre": "us3",
-    "sprint": 1,
-    "estado": "Todo",
-    "flujo": 5
-  },
-  "model": "userstory.userstory",
-  "pk": 3
-},
-{
-  "fields": {
-    "actividad": 12,
-    "proyecto": 11,
-    "nombre": "us5",
-    "sprint": 1,
-    "estado": "Done",
-    "flujo": 5
-  },
-  "model": "userstory.userstory",
-  "pk": 5
 },
 {
   "fields": {
@@ -744,7 +712,7 @@
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
-    "last_login": "2015-04-22T01:12:00.150Z",
+    "last_login": "2015-04-25T01:49:35.960Z",
     "groups": [],
     "user_permissions": [
       1,
@@ -891,6 +859,62 @@
   },
   "model": "auth.user",
   "pk": 42
+},
+{
+  "fields": {
+    "actividad": 12,
+    "desarrollador": 36,
+    "proyecto": 11,
+    "nombre": "us1",
+    "sprint": 1,
+    "estado": "Doing",
+    "prioridad": "Baja",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 1
+},
+{
+  "fields": {
+    "actividad": 25,
+    "desarrollador": 37,
+    "proyecto": 11,
+    "nombre": "us2",
+    "sprint": 2,
+    "estado": "Doing",
+    "prioridad": "Baja",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 2
+},
+{
+  "fields": {
+    "actividad": 26,
+    "desarrollador": 41,
+    "proyecto": 11,
+    "nombre": "us3",
+    "sprint": 1,
+    "estado": "Todo",
+    "prioridad": "Alta",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 3
+},
+{
+  "fields": {
+    "actividad": 12,
+    "desarrollador": 39,
+    "proyecto": 11,
+    "nombre": "us5",
+    "sprint": 1,
+    "estado": "Done",
+    "prioridad": "Media",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 5
 },
 {
   "fields": {

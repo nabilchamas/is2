@@ -9,7 +9,7 @@
 <td valign=bottom>&nbsp;<br>
 <font color="#ffffff" face="helvetica, arial">&nbsp;<br><big><big><strong><a href="is2.html"><font color="#ffffff">is2</font></a>.settings</strong></big></big></font></td
 ><td align=right valign=bottom
-><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/nabil/Nuevos/is2/is2/settings.py">/home/nabil/Nuevos/is2/is2/settings.py</a></font></td></tr></table>
+><font color="#ffffff" face="helvetica, arial"><a href=".">index</a><br><a href="file:/home/miguel/git/is2/is2/settings.py">/home/miguel/git/is2/is2/settings.py</a></font></td></tr></table>
     <p><tt>Django&nbsp;settings&nbsp;for&nbsp;is2&nbsp;project.<br>
 &nbsp;<br>
 For&nbsp;more&nbsp;information&nbsp;on&nbsp;this&nbsp;file,&nbsp;see<br>
@@ -34,18 +34,19 @@ https://docs.djangoproject.com/en/1.7/ref/settings/</tt></p>
 <tr><td bgcolor="#55aa55"><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</tt></td><td>&nbsp;</td>
 <td width="100%"><strong>ALLOWED_HOSTS</strong> = []<br>
 <strong>BASE_DIR</strong> = '.'<br>
-<strong>DATABASES</strong> = {'default': {'ENGINE': 'django.db.backends.sqlite3', 'NAME': './db.sqlite3'}}<br>
+<strong>DATABASES</strong> = {'default': {'ATOMIC_REQUESTS': False, 'AUTOCOMMIT': True, 'CONN_MAX_AGE': 0, 'ENGINE': 'django.db.backends.sqlite3', 'HOST': '', 'NAME': './db.sqlite3', 'OPTIONS': {}, 'PASSWORD': '', 'PORT': '', 'TEST': {'CHARSET': None, 'COLLATION': None, 'MIRROR': None, 'NAME': None}, ...}}<br>
 <strong>DEBUG</strong> = True<br>
-<strong>INSTALLED_APPS</strong> = ('django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.admindocs', 'proyecto', 'usuario', 'inicio', 'perfil', 'flujo')<br>
-<strong>LANGUAGE_CODE</strong> = 'en-us'<br>
+<strong>INSTALLED_APPS</strong> = ('django.contrib.admin', 'django.contrib.auth', 'django.contrib.contenttypes', 'django.contrib.sessions', 'django.contrib.messages', 'django.contrib.staticfiles', 'django.contrib.admindocs', 'apps.proyecto', 'apps.usuario', 'apps.inicio', 'apps.perfil', 'apps.flujo', 'apps.userstory', 'apps.sprint', 'bootstrapform')<br>
+<strong>LANGUAGE_CODE</strong> = 'es-PY'<br>
 <strong>LOGIN_URL</strong> = '/inicio/'<br>
 <strong>MIDDLEWARE_CLASSES</strong> = ('django.contrib.sessions.middleware.SessionMiddleware', 'django.middleware.common.CommonMiddleware', 'django.middleware.csrf.CsrfViewMiddleware', 'django.contrib.auth.middleware.AuthenticationMiddleware', 'django.contrib.auth.middleware.SessionAuthenticationMiddleware', 'django.contrib.messages.middleware.MessageMiddleware', 'django.middleware.clickjacking.XFrameOptionsMiddleware')<br>
 <strong>ROOT_URLCONF</strong> = 'is2.urls'<br>
 <strong>SECRET_KEY</strong> = 'l8#*7b2=gx=l7%lkun%z2k0oj!0a(fbk*d+sa5@nx(5*x*6lmz'<br>
+<strong>STATICFILES_DIRS</strong> = ('./static',)<br>
 <strong>STATIC_URL</strong> = '/static/'<br>
 <strong>TEMPLATE_DEBUG</strong> = True<br>
 <strong>TEMPLATE_DIRS</strong> = ['./templates']<br>
-<strong>TIME_ZONE</strong> = 'UTC'<br>
+<strong>TIME_ZONE</strong> = 'America/Asuncion'<br>
 <strong>USE_I18N</strong> = True<br>
 <strong>USE_L10N</strong> = True<br>
 <strong>USE_TZ</strong> = True<br>

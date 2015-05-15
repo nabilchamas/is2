@@ -74,8 +74,10 @@ def modificar_en_flujo(request, userstory_id):
 
             # mensaje += form.
 
+            mensaje += '\nUsuario: ' + str(request.user)
+
             # if userstory.nombre != form.cleaned_data.get('nombre'):
-            mensaje += '\nNombre: ' + form.cleaned_data.get('nombre')
+            mensaje += '\nUserstory: ' + form.cleaned_data.get('nombre')
 
             # if userstory.estado != form.cleaned_data.get('estado'):
             mensaje += '\nEstado: ' + form.cleaned_data.get('estado')

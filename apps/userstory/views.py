@@ -6,6 +6,9 @@ from apps.userstory.models import UserStory
 from apps.flujo.models import Flujo, Actividad
 from apps.userstory.forms import UserStoryModelForm
 
+from django.core.mail import send_mail
+from django.conf import settings
+
 
 def menu_userstory(request):
     """
@@ -66,9 +69,30 @@ def modificar_en_flujo(request, userstory_id):
         form = UserStoryModelForm(request.POST, instance=userstory)
 
         if form.is_valid():
+            subject = 'Cambios en ' + form.cleaned_data.get('nombre')
+            mensaje = '\n'
+
+            # mensaje += form.
+
+            # if userstory.nombre != form.cleaned_data.get('nombre'):
+            mensaje += '\nNombre: ' + form.cleaned_data.get('nombre')
+
+            # if userstory.estado != form.cleaned_data.get('estado'):
+            mensaje += '\nEstado: ' + form.cleaned_data.get('estado')
+
+            # if userstory.prioridad != form.cleaned_data.get('prioridad'):
+            mensaje += '\nPrioridad: ' + form.cleaned_data.get('prioridad')
+
+            # mensaje = str(form.fields['nombre'])
+
+
+            send_mail(subject, mensaje, settings.EMAIL_HOST_USER,
+            ['is2.r12.2015@gmail.com'])
+
             form.save()
             context = {'flujo_id':flujo.id}
             return HttpResponseRedirect(reverse('flujo:desplegar_flujo', kwargs=context))
+
 
     context = {'form':form, 'userstory_id':userstory_id, 
             'flujo':flujo, 'lista_actividades':lista_actividades}

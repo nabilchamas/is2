@@ -66,23 +66,23 @@ WSGI_APPLICATION = 'is2.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 #desarrollo
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
-
-# produccion
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'is2_produccion',                      
-        'USER': 'nabil',
-        'PASSWORD': 'nabil',
-        'HOST': '127.0.0.1',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
+
+# produccion
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#         'NAME': 'is2_produccion',                      
+#         'USER': 'nabil',
+#         'PASSWORD': 'nabil',
+#         'HOST': '127.0.0.1',
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -118,3 +118,10 @@ STATICFILES_DIRS = (
 #                       '%d %B %Y', '%d %B, %Y')
 # from django.conf.locale.en import formats
 # formats.DATE_INPUT_FORMATS = DATE_INPUT_FORMATS
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'is2.r12.2015@gmail.com'
+EMAIL_HOST_PASSWORD = 'carolinacarolina'

@@ -15,4 +15,5 @@ urlpatterns = patterns('',
     url(r'^flujo/', include('apps.flujo.urls', namespace='flujo')),
     url(r'^userstory/', include('apps.userstory.urls', namespace='userstory')),
     url(r'^sprint/', include('apps.sprint.urls', namespace='sprint')),
+    url(r'^prueba/', include('apps.burndownchart.urls', namespace='burndownchart')),
 )

@@ -45,6 +45,9 @@ INSTALLED_APPS = (
     'apps.userstory',
     'apps.sprint',
     'bootstrapform',
+    'apps.burndownchart',
+    'chartit',
+    'simplejson',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -57,6 +60,11 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
 ROOT_URLCONF = 'is2.urls'
 
 WSGI_APPLICATION = 'is2.wsgi.application'
@@ -66,20 +74,20 @@ WSGI_APPLICATION = 'is2.wsgi.application'
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 #desarrollo
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+#DATABASES = {
+#    'default': {
+#        'ENGINE': 'django.db.backends.sqlite3',
+#        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#    }
+#}
 
 # produccion
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'is2_produccion',                      
-        'USER': 'nabil',
-        'PASSWORD': 'nabil',
+        'USER': 'postgres',
+        'PASSWORD': 'postgres',
         'HOST': '127.0.0.1',
     }
 }

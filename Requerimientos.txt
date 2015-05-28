@@ -1,0 +1,13 @@
+Burndownchart
+=============
+* pip install simplejson
+
+* Descargar repositorio de https://github.com/pgollakota/django-chartit
+
+* Modificar archivo chartit.py modificar la importacion de simple json a "import simplejson"
+
+* Correr setup.py de chartit
+
+* Se requieren las librerias • jQuery • Highcharts
+
+

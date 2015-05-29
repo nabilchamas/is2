@@ -1,7 +1,7 @@
 from django.db import models
 
-class MonthlyWeatherByCity(models.Model):
+class BurndownchartDato(models.Model):
 
-    month = models.IntegerField()
-    boston_temp = models.DecimalField(max_digits=5, decimal_places=1)
-    houston_temp = models.DecimalField(max_digits=5, decimal_places=1)
+    burndown_estimado = models.IntegerField()
+    burndown_actual = models.IntegerField()
+    sprint_dias = models.IntegerField()

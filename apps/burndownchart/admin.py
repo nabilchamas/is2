@@ -1,4 +1,4 @@
 from django.contrib import admin
-from apps.burndownchart.models import MonthlyWeatherByCity
+from apps.burndownchart.models import BurndownchartDato
 
-admin.site.register(MonthlyWeatherByCity)
+admin.site.register(BurndownchartDato)

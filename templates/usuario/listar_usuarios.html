@@ -202,12 +202,18 @@
 			<table class="table text-center">
 				<tr class="text-center">
 					<td><b>Usuario</b></td>
+					<td><b>Nombres</b></td>
+					<td><b>Apellidos</b></td>
+					<td><b>E-mail</b></td>
 					<td><b>Modificar</b></td>
 					<td><b>Eliminar</b></td>
 				</tr>
 				{% for usuario in lista_usuarios %}
 				<tr>
 					<td>{{usuario.username}}</td>
+					<td>{{usuario.first_name}}</td>
+					<td>{{usuario.last_name}}</td>
+					<td>{{usuario.email}}</td>
 					<td><a href="{% url 'usuario:modificar_usuario' usuario.id %}"><span
 							class="glyphicon glyphicon-pencil"></span></a></td>
 					<td><a href="{% url 'usuario:eliminar_usuario' usuario.id %}"

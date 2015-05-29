@@ -200,13 +200,21 @@
 
 			<table class="table text-center">
 				<tr class="text-center">
-					<td><b>Proyecto</b></td>
+					<td><b>Nombre del Proyecto</b></td>
+					<td><b>Descripcion</b></td>
+					<td><b>Cliente</b></td>
+					<td><b>Fecha Inicio</b></td>
+					<td><b>Fecha Fin</b></td>
 					<td><b>Modificar</b></td>
 					<td><b>Eliminar</b></td>
 				</tr>
 				{% for proyecto in lista_proyectos %}
 				<tr>
 					<td>{{ proyecto.nombre }}</td>
+					<td>{{ proyecto.descripcion }}</td>
+					<td>{{ proyecto.cliente }}</td>
+					<td>{{ proyecto.fecha_inicio}}</td>
+					<td>{{ proyecto.fecha_fin }}</td>
 					<td><a
 						href="{% url 'proyecto:modificar_proyecto' proyecto.id %}"><span
 							class="glyphicon glyphicon-pencil"></span></a></td>

@@ -269,7 +269,7 @@
 {
   "fields": {
     "nombre": "FLUJO-2",
-    "proyecto": 11
+    "proyecto": 12
   },
   "model": "flujo.flujo",
   "pk": 7
@@ -982,7 +982,7 @@
   "fields": {
     "sprint_dias": 13,
     "burndown_estimado": 3,
-    "burndown_actual": 2,
+    "burndown_actual": 3,
     "proyecto": 11
   },
   "model": "burndownchart.burndownchartdato",
@@ -1008,7 +1008,7 @@
   "fields": {
     "sprint_dias": 20,
     "burndown_estimado": 2,
-    "burndown_actual": 1,
+    "burndown_actual": 3,
     "proyecto": 11
   },
   "model": "burndownchart.burndownchartdato",
@@ -1017,10 +1017,10 @@
 
 {
   "fields": {
-    "actividad": 12,
+    "actividad": 27,
     "desarrollador": 39,
     "proyecto": 11,
-    "nombre": "us5",
+    "nombre": "US5",
     "sprint": 1,
     "estado": "Done",
     "prioridad": "Media",
@@ -1029,6 +1029,95 @@
   "model": "userstory.userstory",
   "pk": 5
 },
+
+{
+  "fields": {
+    "sprint_dias": 40,
+    "burndown_estimado": 1,
+    "burndown_actual": 1,
+    "proyecto": 11
+  },
+  "model": "burndownchart.burndownchartdato",
+  "pk": 5
+},
+
+{
+  "fields": {
+    "sprint_dias": 45,
+    "burndown_estimado": 0,
+    "burndown_actual": 0,
+    "proyecto": 11
+  },
+  "model": "burndownchart.burndownchartdato",
+  "pk": 6
+},
+
+{
+  "fields": {
+    "actividad": 27,
+    "desarrollador": 39,
+    "proyecto": 12,
+    "nombre": "US6",
+    "sprint": 6,
+    "estado": "Done",
+    "prioridad": "Media",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 6
+},
+{
+  "fields": {
+    "actividad": 27,
+    "desarrollador": 39,
+    "proyecto": 12,
+    "nombre": "US7",
+    "sprint": 6,
+    "estado": "Done",
+    "prioridad": "Media",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 7
+},
+
+{
+  "fields": {
+    "actividad": 25,
+    "desarrollador": 39,
+    "proyecto": 12,
+    "nombre": "US8",
+    "sprint": 6,
+    "estado": "Done",
+    "prioridad": "Alta",
+    "flujo": 5
+  },
+  "model": "userstory.userstory",
+  "pk": 7
+},
+
+{
+  "fields": {
+    "sprint_dias": 0,
+    "burndown_estimado": 3,
+    "burndown_actual": 3,
+    "proyecto": 12
+  },
+  "model": "burndownchart.burndownchartdato",
+  "pk": 61
+},
+
+{
+  "fields": {
+    "sprint_dias": 10,
+    "burndown_estimado": 2,
+    "burndown_actual": 1,
+    "proyecto": 12
+  },
+  "model": "burndownchart.burndownchartdato",
+  "pk": 62
+},
+
 {
   "fields": {
     "action_flag": 3,

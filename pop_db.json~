@@ -1017,57 +1017,17 @@
 
 {
   "fields": {
-    "actividad": 27,
-    "desarrollador": 39,
-    "proyecto": 11,
-    "nombre": "US5",
-    "sprint": 1,
-    "estado": "Done",
-    "prioridad": "Media",
-    "flujo": 5
-  },
-  "model": "userstory.userstory",
-  "pk": 5
-},
-
-{
-  "fields": {
-    "sprint_dias": 40,
-    "burndown_estimado": 1,
-    "burndown_actual": 0,
-    "proyecto": 11
-  },
-  "model": "burndownchart.burndownchartdato",
-  "pk": 5
-},
-
-{
-  "fields": {
     "actividad": 12,
     "desarrollador": 39,
     "proyecto": 11,
-    "nombre": "US6",
+    "nombre": "us5",
     "sprint": 1,
     "estado": "Done",
     "prioridad": "Media",
     "flujo": 5
   },
   "model": "userstory.userstory",
-  "pk": 6
-},
-{
-  "fields": {
-    "actividad": 25,
-    "desarrollador": 39,
-    "proyecto": 11,
-    "nombre": "US7",
-    "sprint": 1,
-    "estado": "Done",
-    "prioridad": "Media",
-    "flujo": 5
-  },
-  "model": "userstory.userstory",
-  "pk": 7
+  "pk": 5
 },
 {
   "fields": {

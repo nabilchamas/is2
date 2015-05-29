@@ -27,8 +27,6 @@
 					Manager</a>
 			</div>
 
-
-
 			<div class="pull-right">
 				<ul class="nav navbar-nav">
 					<li><a href="{% url 'inicio:salir' %}">Logout</a></li>
@@ -36,10 +34,6 @@
 			</div>
 		</div>
 	</nav>
-
-
-
-
 
 	<div class="row">
 		<div class="col-sm-2">
@@ -141,13 +135,13 @@
 								aria-controls="cinco"> Sprint </a>
 						</h4>
 					</div>
-					<div id="cinco" class="panel-collapse collapse in" role="tabpanel"
+					<div id="cinco" class="panel-collapse collapse" role="tabpanel"
 						aria-labelledby="headingThree">
 						<div class="list-group">
 							<li><a href="{% url 'sprint:crear_sprint' %}"
 								class="list-group-item">Crear sprint</a></li>
 							<li><a href="{% url 'sprint:listar_sprints' %}"
-								class="list-group-item active">Listar sprints</a></li>
+								class="list-group-item">Listar sprints</a></li>
 						</div>
 					</div>
 				</div>
@@ -170,7 +164,6 @@
 						</div>
 					</div>
 				</div>
-
 				<div class="panel panel-default">
 					<div class="panel-heading" role="tab" id="burn">
 						<h4 class="panel-title">
@@ -179,59 +172,49 @@
 								aria-controls="siete"> Burndownchart </a>
 						</h4>
 					</div>
-					<div id="siete" class="panel-collapse collapse" role="tabpanel"
+					<div id="siete" class="panel-collapse collapse in" role="tabpanel"
 						aria-labelledby="burn">
 						<div class="list-group">
 							<li><a
 								href="{% url 'burndownchart:listar_proyectos_burndownchart' %}"
-								class="list-group-item">Burndownchart</a></li>
+								class="list-group-item  active">Burndownchart</a></li>
 						</div>
 					</div>
 				</div>
-
 			</div>
 		</div>
-
-
-
 		<div class="col-sm-10">
-
-			<h3 align="center">Lista de sprints</h3>
+			<h3 align="center">Burndownchart - Proyectos</h3>
 			</br>
 
 			<table class="table text-center">
 				<tr class="text-center">
-					<td><b>Sprint</b></td>
-					<td><b>Modificar</b></td>
-					<td><b>Eliminar</b></td>
+					<td><b>Proyecto</b></td>
+					<td><b>Ver Burndownchart</b></td>
 				</tr>
-				{% for sprint in lista_sprints %}
+				{% for proyecto in lista_proyectos %}
 				<tr>
-					<td>{{ sprint.nombre }}</td>
-					<td><a href="{% url 'sprint:modificar_sprint' sprint.id %}"><span
-							class="glyphicon glyphicon-pencil"></span></a></td>
-					<td><a href="{% url 'sprint:eliminar_sprint' sprint.id %}"
-						onClick="return confirm('Desea eliminar el sprint: {{sprint.nombre}}?')"><span
-							class="glyphicon glyphicon-remove"></span></a></td>
+					<td>{{ proyecto.nombre }}</td>
+					<td><a
+						href="{% url 'burndownchart:burndownchart' proyecto.id %}"><span></span>Ver
+							Burndownchart</a></td>
 				</tr>
 				{% endfor %}
 			</table>
-
-
-
 		</div>
-
-
-
-
 	</div>
-
-
-
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="{{ STATIC_URL }}/jquery/jquery-1.11.2.js"></script>
 	<!-- Include all compiled plugins (below), or include individual files as needed -->
 	<script src="{{ STATIC_URL }}/bootstrap-3.3.4-dist/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
 

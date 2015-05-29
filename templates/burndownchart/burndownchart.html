@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script
+	src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 <script src="http://code.highcharts.com/highcharts.js"></script>
 {% load chartit %} {{ burndownchart|load_charts:"container" }}
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Project manager</title>
-<link href="/static/bootstrap-3.3.4-dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="/static/bootstrap-3.3.4-dist/css/bootstrap.min.css"
+	rel="stylesheet">
 </head>
 
 <body>
@@ -142,40 +144,50 @@
 								aria-controls="seis"> User Story </a>
 						</h4>
 					</div>
-					<div id="seis" class="panel-collapse collapse in" role="tabpanel"
+					<div id="seis" class="panel-collapse collapse" role="tabpanel"
 						aria-labelledby="headingThree">
 						<div class="list-group">
 							<li><a href="{% url 'userstory:crear_userstory' %}"
 								class="list-group-item">Crear user story</a></li>
 							<li><a href="{% url 'userstory:listar_userstories' %}"
-								class="list-group-item active">Listar user stories</a></li>
+								class="list-group-item">Listar user stories</a></li>
 						</div>
 					</div>
 				</div>
 				<div class="panel panel-default">
-					<div class="panel-heading" role="tab" id="headingThree">
+					<div class="panel-heading" role="tab" id="burn">
 						<h4 class="panel-title">
 							<a class="collapsed" data-toggle="collapse"
 								data-parent="#accordion" href="#siete" aria-expanded="false"
-								aria-controls="seis"> Burndownchart </a>
+								aria-controls="siete"> Burndownchart </a>
 						</h4>
 					</div>
 					<div id="siete" class="panel-collapse collapse in" role="tabpanel"
-						aria-labelledby="headingThree">
+						aria-labelledby="burn">
 						<div class="list-group">
-							<li><a  href="{% url 'burndownchart:burndownchart' %}"
-								class="list-group-item">Burndownchart</a></li>
+							<li><a
+								href="{% url 'burndownchart:listar_proyectos_burndownchart' %}"
+								class="list-group-item  active">Burndownchart</a></li>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="col-sm-10">
-			<h3 align="center">Burndownchart</h3>
+			<h3 align="center">Burndownchart {{proyecto}}</h3>
 			</br>
 			<div id='container'>Chart will be rendered here {{
 				burndownchart|load_charts:"container" }}</div>
+
+			<div class="col-md-8" align="left">
+				<a class="btn btn-primary" href="{% url 'burndownchart:listar_proyectos_burndownchart' %}">
+					Volver </a>
+			</div>
 		</div>
+
+
+
+
 	</div>
 	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	<script src="/static/jquery/jquery-1.11.2.js"></script>

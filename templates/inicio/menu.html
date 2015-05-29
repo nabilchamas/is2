@@ -160,24 +160,25 @@
 						</div>
 					</div>
 				</div>
-
-			</div>
-			<div class="panel panel-default">
-				<div class="panel-heading" role="tab" id="headingThree">
-					<h4 class="panel-title">
-						<a class="collapsed" data-toggle="collapse"
-							data-parent="#accordion" href="#siete" aria-expanded="false"
-							aria-controls="seis"> Burndownchart </a>
-					</h4>
-				</div>
-				<div id="siete" class="panel-collapse collapse in" role="tabpanel"
-					aria-labelledby="headingThree">
-					<div class="list-group">
-						<li><a href="{% url 'burndownchart:burndownchart' %}"
-							class="list-group-item">Burndownchart</a></li>
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="burn">
+						<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse"
+								data-parent="#accordion" href="#siete" aria-expanded="false"
+								aria-controls="siete"> Burndownchart </a>
+						</h4>
+					</div>
+					<div id="siete" class="panel-collapse collapse" role="tabpanel"
+						aria-labelledby="burn">
+						<div class="list-group">
+							<li><a
+								href="{% url 'burndownchart:listar_proyectos_burndownchart' %}"
+								class="list-group-item">Burndownchart</a></li>
+						</div>
 					</div>
 				</div>
 			</div>
+
 		</div>
 		<div class="col-sm-10">
 			<div class="col-sm-10">

@@ -52,7 +52,7 @@ def eliminar_perfil(request, perfil_id):
 
 @login_required
 def listar_perfiles(request):
-	lista_perfiles = Group.objects.all()
+	lista_perfiles = Group.objects.all().order_by('name')
 	context = {'lista_perfiles':lista_perfiles}
 	return render(request, 'perfil/listar_perfiles.html', context)
 

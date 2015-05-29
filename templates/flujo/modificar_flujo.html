@@ -147,7 +147,23 @@
     </div>
   </div>
 
-
+				<div class="panel panel-default">
+					<div class="panel-heading" role="tab" id="burn">
+						<h4 class="panel-title">
+							<a class="collapsed" data-toggle="collapse"
+								data-parent="#accordion" href="#siete" aria-expanded="false"
+								aria-controls="siete"> Burndownchart </a>
+						</h4>
+					</div>
+					<div id="siete" class="panel-collapse collapse" role="tabpanel"
+						aria-labelledby="burn">
+						<div class="list-group">
+							<li><a
+								href="{% url 'burndownchart:listar_proyectos_burndownchart' %}"
+								class="list-group-item">Burndownchart</a></li>
+						</div>
+					</div>
+				</div>
 
 </div>
     

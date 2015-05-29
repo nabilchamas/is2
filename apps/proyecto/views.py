@@ -73,6 +73,6 @@ def listar_proyectos(request):
         Lista los proyectos
     '''
 
-    lista_proyectos = Proyecto.objects.all()
+    lista_proyectos = Proyecto.objects.all().order_by('nombre')
     context = {'lista_proyectos':lista_proyectos}
     return render(request, 'proyecto/listar_proyectos.html', context)

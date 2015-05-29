@@ -62,7 +62,7 @@ def modificar_en_flujo(request, userstory_id):
 
     userstory = UserStory.objects.get(pk=userstory_id)
     flujo = userstory.flujo
-    lista_actividades = Actividad.objects.filter(flujo=flujo)
+    lista_actividades = Actividad.objects.filter(flujo=flujo).order_by('id')
     form = UserStoryModelForm(instance=userstory)
 
     if request.method=='POST':
@@ -121,7 +121,7 @@ def listar_userstories(request):
         Lista los userstories 
     '''
 
-    lista_userstories = UserStory.objects.all()
+    lista_userstories = UserStory.objects.all().order_by('nombre')
     context = {'lista_userstories':lista_userstories}
     return render(request, 'userstory/listar_userstories.html', context)
 

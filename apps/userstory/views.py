@@ -8,6 +8,9 @@ from apps.userstory.forms import UserStoryModelForm
 
 from django.core.mail import send_mail
 from django.conf import settings
+from archivos.models import Archivo
+from pycurl import FORM_FILE
+from apps.userstory import forms
 
 
 def menu_userstory(request):

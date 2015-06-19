@@ -1083,14 +1083,14 @@
 
 {
   "fields": {
-    "actividad": 25,
+    "actividad": 22,
     "desarrollador": 39,
     "proyecto": 12,
     "nombre": "US8",
     "sprint": 6,
     "estado": "Done",
     "prioridad": "Alta",
-    "flujo": 5
+    "flujo": 7
   },
   "model": "userstory.userstory",
   "pk": 7

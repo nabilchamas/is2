@@ -217,9 +217,9 @@
 				</tr>
 
 				{% for userstory in lista_user_stories %}	
-					{% if userstory.prioridad == "Baja" %}
+					{% if userstory.prioridad == "Alta" %}
 					<tr>
-						<td bgcolor="#75FF75">{{ userstory.nombre}}</td>
+						<td bgcolor="#FF704D">{{ userstory.nombre}}</td>
 					</tr>
 					{% endif %}
 				{% endfor %}
@@ -233,9 +233,9 @@
 				{% endfor %}
 
 				{% for userstory in lista_user_stories %}	
-					{% if userstory.prioridad == "Alta" %}
+					{% if userstory.prioridad == "Baja" %}
 					<tr>
-						<td bgcolor="#FF704D">{{ userstory.nombre}}</td>
+						<td bgcolor="#75FF75">{{ userstory.nombre}}</td>
 					</tr>
 					{% endif %}
 				{% endfor %}
@@ -251,7 +251,7 @@
 					{% for userstory in lista_user_stories %}	
 						{% if userstory.sprint == sprint %}
 						<tr>
-							<td bgcolor="#75FF75">{{ userstory.nombre}}</td>
+							<td>{{ userstory.nombre}}</td>
 						</tr>
 						{% endif %}
 					{% endfor %}

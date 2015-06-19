@@ -5,6 +5,9 @@ from django.core.urlresolvers import reverse
 from django.contrib.auth.decorators import login_required, permission_required
 
 from apps.proyecto.models import Proyecto
+from apps.userstory.models import UserStory
+from apps.sprint.models import Sprint
+from apps.flujo.models import Flujo, Actividad
 from apps.proyecto.forms import ProyectoModelForm
 
 @login_required
@@ -76,3 +79,18 @@ def listar_proyectos(request):
     lista_proyectos = Proyecto.objects.all().order_by('nombre')
     context = {'lista_proyectos':lista_proyectos}
     return render(request, 'proyecto/listar_proyectos.html', context)
+
+def informe_proyecto(request, proyecto_id):
+    proyecto = Proyecto.objects.get(pk=proyecto_id)
+    lista_user_stories = UserStory.objects.all().filter(proyecto=proyecto)
+    lista_sprints = Sprint.objects.all().filter(proyecto=proyecto).order_by('nombre')
+    flujo = Flujo.objects.get(proyecto=proyecto)
+    primera_actividad = Actividad.objects.order_by('pk').filter(flujo=flujo)[0]
+    ultima_actividad = Actividad.objects.order_by('pk').reverse().filter(flujo=flujo)[0]
+
+
+
+    context = {'proyecto':proyecto, 'lista_user_stories':lista_user_stories,
+    'lista_sprints':lista_sprints, 'primera_actividad':primera_actividad, 
+    'ultima_actividad':ultima_actividad}
+    return render(request, 'proyecto/informe_proyecto.html', context)

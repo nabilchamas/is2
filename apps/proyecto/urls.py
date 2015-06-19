@@ -18,6 +18,9 @@ urlpatterns = patterns('',
 		# ej: proyecto/listar_proyectos
 		url(r'^listar_proyectos/', views.listar_proyectos, name='listar_proyectos'),
 
+		# ej: proyecto/informe_proyecto/2
+		url(r'^informe_proyecto/(?P<proyecto_id>\d+)/$', views.informe_proyecto, name='informe_proyecto'),
+
 	)
 
 

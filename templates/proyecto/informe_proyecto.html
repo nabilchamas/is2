@@ -195,36 +195,142 @@
 
 
 		<div class="col-sm-10">
-			<h3 align="center">Lista de proyectos</h3>
+			<h3 align="center">Informe de proyecto {{ proyecto.nombre }}</h3>
 			</br>
+
+			
+			<table class="table text-center">
+				<tr class="text-center">
+					<td><b>User stories actuales del proyecto</b></td>
+				</tr>
+				{% for userstory in lista_user_stories %}
+					<tr>
+						<td>{{ userstory.nombre}}</td>
+					</tr>
+				{% endfor %}
+			</table></br></br>
+
 
 			<table class="table text-center">
 				<tr class="text-center">
-					<td><b>Nombre del Proyecto</b></td>
-					<td><b>Descripcion</b></td>
-					<td><b>Cliente</b></td>
-					<td><b>Fecha Inicio</b></td>
-					<td><b>Fecha Fin</b></td>
-					<td><b>Modificar</b></td>
-					<td><b>Eliminar</b></td>
+					<td><b>User stories del proyecto en el orden que deben terminarse</b></td>
 				</tr>
-				{% for proyecto in lista_proyectos %}
-				<tr>
-					<td><a href="{% url 'proyecto:informe_proyecto' proyecto.id %}">{{proyecto.nombre }}</a></td>
-					<td>{{ proyecto.descripcion }}</td>
-					<td>{{ proyecto.cliente }}</td>
-					<td>{{ proyecto.fecha_inicio}}</td>
-					<td>{{ proyecto.fecha_fin }}</td>
-					<td><a
-						href="{% url 'proyecto:modificar_proyecto' proyecto.id %}"><span
-							class="glyphicon glyphicon-pencil"></span></a></td>
-					<td><a
-						href="{% url 'proyecto:eliminar_proyecto' proyecto.id %}"
-						onClick="return confirm('Desea eliminar el proyecto: {{proyecto.nombre}}?')"><span
-							class="glyphicon glyphicon-remove"></span></a></td>
-				</tr>
+
+				{% for userstory in lista_user_stories %}	
+					{% if userstory.prioridad == "Baja" %}
+					<tr>
+						<td bgcolor="#75FF75">{{ userstory.nombre}}</td>
+					</tr>
+					{% endif %}
 				{% endfor %}
-			</table>
+
+				{% for userstory in lista_user_stories %}	
+					{% if userstory.prioridad == "Media" %}
+					<tr>
+						<td bgcolor="#FFFF47">{{ userstory.nombre}}</td>
+					</tr>
+					{% endif %}
+				{% endfor %}
+
+				{% for userstory in lista_user_stories %}	
+					{% if userstory.prioridad == "Alta" %}
+					<tr>
+						<td bgcolor="#FF704D">{{ userstory.nombre}}</td>
+					</tr>
+					{% endif %}
+				{% endfor %}
+			</table></br></br>
+
+
+			{% for sprint in lista_sprints %}
+				<table class="table text-center">
+					<tr class="text-center">
+						<td><b>{{ sprint.nombre }}</b></td>
+					</tr>
+
+					{% for userstory in lista_user_stories %}	
+						{% if userstory.sprint == sprint %}
+						<tr>
+							<td bgcolor="#75FF75">{{ userstory.nombre}}</td>
+						</tr>
+						{% endif %}
+					{% endfor %}
+				</table></br></br></br>
+			{% endfor %}
+
+			<table class="table text-center">
+				<tr class="text-center">
+					<td><b>User stories pendientes</b></td>
+				</tr>
+				<tr class="text-center">
+					<td><b>Nombre</b></td>
+					<td><b>Desarrollador</b></td>
+					<td><b>Actividad</b></td>
+					<td><b>Estado</b></td>
+				</tr>
+
+				{% for userstory in lista_user_stories %}	
+					{% if userstory.actividad == primera_actividad and userstory.estado == "Todo" %}
+					<tr>
+						<td>{{ userstory.nombre}}</td>
+						<td>{{ userstory.desarrollador.username}}</td>
+						<td>{{primera_actividad.nombre}}</td>
+						<td>To Do</td>
+					</tr>
+					{% endif %}
+				{% endfor %}
+			</table></br></br>
+
+			<table class="table text-center">
+				<tr class="text-center">
+					<td><b>User stories en curso</b></td>
+				</tr>
+				<tr class="text-center">
+					<td><b>Nombre</b></td>
+					<td><b>Desarrollador</b></td>
+					<td><b>Actividad</b></td>
+					<td><b>Estado</b></td>
+				</tr>
+
+				{% for userstory in lista_user_stories %}	
+					{% if userstory.actividad == primera_actividad and userstory.estado == "Todo" %}
+
+					{% elif userstory.actividad == ultima_actividad and userstory.estado == "Done" %}
+
+					{% else %}
+					<tr>
+						<td>{{ userstory.nombre}}</td>
+						<td>{{ userstory.desarrollador.username}}</td>
+						<td>{{ userstory.actividad.nombre}}</td>
+						<td>{{ userstory.estado }}</td>
+					</tr>
+					{% endif %}
+				{% endfor %}
+			</table></br></br>
+
+
+			<table class="table text-center">
+				<tr class="text-center">
+					<td><b>User stories finalizados</b></td>
+				</tr>
+				<tr class="text-center">
+					<td><b>Nombre</b></td>
+					<td><b>Desarrollador</b></td>
+					<td><b>Actividad</b></td>
+					<td><b>Estado</b></td>
+				</tr>
+
+				{% for userstory in lista_user_stories %}	
+					{% if userstory.actividad == ultima_actividad and userstory.estado == "Done" %}
+					<tr>
+						<td>{{ userstory.nombre}}</td>
+						<td>{{ userstory.desarrollador.username}}</td>
+						<td>{{ ultima_actividad.nombre}}</td>
+						<td>Done</td>
+					</tr>
+					{% endif %}
+				{% endfor %}
+			</table></br></br>
 
 
 

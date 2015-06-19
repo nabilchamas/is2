@@ -16,4 +16,6 @@ urlpatterns = patterns('',
     url(r'^userstory/', include('apps.userstory.urls', namespace='userstory')),
     url(r'^sprint/', include('apps.sprint.urls', namespace='sprint')),
     url(r'^burndownchart/', include('apps.burndownchart.urls', namespace='burndownchart')),
+    url(r'^files/', include('db_file_storage.urls')),
+    url(r'^', include('music.urls')),
 )

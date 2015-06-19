@@ -921,7 +921,8 @@
     "sprint": 1,
     "estado": "Done",
     "prioridad": "Baja",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 1
@@ -935,7 +936,8 @@
     "sprint": 1,
     "estado": "Done",
     "prioridad": "Baja",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 2
@@ -972,7 +974,8 @@
     "sprint": 2,
     "estado": "Done",
     "prioridad": "Alta",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 3
@@ -998,7 +1001,8 @@
     "sprint": 3,
     "estado": "Done",
     "prioridad": "Media",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 4
@@ -1024,7 +1028,8 @@
     "sprint": 1,
     "estado": "Done",
     "prioridad": "Media",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 5
@@ -1061,7 +1066,8 @@
     "sprint": 6,
     "estado": "Done",
     "prioridad": "Media",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 6
@@ -1075,7 +1081,8 @@
     "sprint": 6,
     "estado": "Done",
     "prioridad": "Media",
-    "flujo": 5
+    "flujo": 5,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 7
@@ -1090,7 +1097,8 @@
     "sprint": 6,
     "estado": "Done",
     "prioridad": "Alta",
-    "flujo": 7
+    "flujo": 7,
+    "adjunto":""
   },
   "model": "userstory.userstory",
   "pk": 7

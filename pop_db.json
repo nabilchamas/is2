@@ -171,6 +171,14 @@
 },
 {
   "fields": {
+    "expire_date": "2015-07-03T20:33:54.792Z",
+    "session_data": "MmEyNjk4YzFkOGEzOWY3YWYzMmRkMTU1ZTQyN2VkNjg2MjE3YWE3Njp7Il9hdXRoX3VzZXJfaGFzaCI6IjA4MjJkOWFkNDVkMzRiNDc5Y2MxMzA5ZDk2YjdhZGQ2OWJiOGE2YjkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjF9"
+  },
+  "model": "sessions.session",
+  "pk": "25indb6j1i0n97my3ix1vs964tvodlpa"
+},
+{
+  "fields": {
     "expire_date": "2015-04-24T01:34:15.479Z",
     "session_data": "NmNmZTQ1MmQyMzY2Y2M2ODNhNWI3NzNiY2YxMzRjYTE2MzE5NGU2MDp7fQ=="
   },
@@ -331,6 +339,18 @@
 },
 {
   "fields": {
+    "fecha_fin": "2016-03-11",
+    "fecha_inicio": "2015-06-01",
+    "descripcion": "Webs para el Gobierno.",
+    "nombre": "SENATICs",
+    "codigo": 123,
+    "cliente": "SENATICs"
+  },
+  "model": "proyecto.proyecto",
+  "pk": 13
+},
+{
+  "fields": {
     "nombre": "FLUJO-1",
     "proyecto": 11
   },
@@ -344,6 +364,14 @@
   },
   "model": "flujo.flujo",
   "pk": 7
+},
+{
+  "fields": {
+    "nombre": "FLUJO-3",
+    "proyecto": 13
+  },
+  "model": "flujo.flujo",
+  "pk": 8
 },
 {
   "fields": {
@@ -400,6 +428,30 @@
   },
   "model": "flujo.actividad",
   "pk": 28
+},
+{
+  "fields": {
+    "nombre": "Fase1",
+    "flujo": 8
+  },
+  "model": "flujo.actividad",
+  "pk": 29
+},
+{
+  "fields": {
+    "nombre": "Fase2",
+    "flujo": 8
+  },
+  "model": "flujo.actividad",
+  "pk": 30
+},
+{
+  "fields": {
+    "nombre": "Fase3",
+    "flujo": 8
+  },
+  "model": "flujo.actividad",
+  "pk": 31
 },
 {
   "fields": {
@@ -472,6 +524,18 @@
   },
   "model": "sprint.sprint",
   "pk": 6
+},
+{
+  "fields": {
+    "fecha_fin": "2015-07-26",
+    "fecha_inicio": "2015-06-22",
+    "proyecto": 13,
+    "descripcion": "Comenzar proyecto",
+    "nombre": "Sprint 10",
+    "estado": "No activo"
+  },
+  "model": "sprint.sprint",
+  "pk": 7
 },
 {
   "fields": {
@@ -1190,7 +1254,7 @@
     "is_active": true,
     "is_superuser": true,
     "is_staff": true,
-    "last_login": "2015-06-19T20:09:51.325Z",
+    "last_login": "2015-06-19T20:33:54.780Z",
     "groups": [],
     "user_permissions": [
       1,
@@ -1215,7 +1279,7 @@
       17,
       18
     ],
-    "password": "pbkdf2_sha256$15000$GkIGmgWX3BDO$gdgsln8HSHXN+dqZOVtqyQKXgBwQLqg5W8O1Q59khJo=",
+    "password": "pbkdf2_sha256$12000$zjTjN5lJfYSN$9KQK/pn4TEUa9gZwRZMnjQQzxY0/2l3jQ5V1HUrZp4A=",
     "email": "nabilchamasi@gmail.com",
     "date_joined": "2015-04-04T18:02:14Z"
   },
@@ -1418,7 +1482,7 @@
     "actividad": 27,
     "adjunto": "archivos.Archivo/bytes/filename/mimetype/is.jpg",
     "desarrollador": 39,
-    "proyecto": 12,
+    "proyecto": 11,
     "nombre": "US6",
     "sprint": 6,
     "estado": "Done",
@@ -1442,6 +1506,66 @@
   },
   "model": "userstory.userstory",
   "pk": 7
+},
+{
+  "fields": {
+    "actividad": 29,
+    "adjunto": "",
+    "desarrollador": 39,
+    "proyecto": 13,
+    "nombre": "US20",
+    "sprint": 7,
+    "estado": "Todo",
+    "prioridad": "Baja",
+    "flujo": 8
+  },
+  "model": "userstory.userstory",
+  "pk": 8
+},
+{
+  "fields": {
+    "actividad": 30,
+    "adjunto": "",
+    "desarrollador": 42,
+    "proyecto": 13,
+    "nombre": "US21",
+    "sprint": 7,
+    "estado": "Doing",
+    "prioridad": "Media",
+    "flujo": 8
+  },
+  "model": "userstory.userstory",
+  "pk": 9
+},
+{
+  "fields": {
+    "actividad": 31,
+    "adjunto": "",
+    "desarrollador": 37,
+    "proyecto": 13,
+    "nombre": "US22",
+    "sprint": 7,
+    "estado": "Done",
+    "prioridad": "Alta",
+    "flujo": 8
+  },
+  "model": "userstory.userstory",
+  "pk": 10
+},
+{
+  "fields": {
+    "actividad": 31,
+    "adjunto": "",
+    "desarrollador": 40,
+    "proyecto": 13,
+    "nombre": "US23",
+    "sprint": 7,
+    "estado": "Done",
+    "prioridad": "Media",
+    "flujo": 8
+  },
+  "model": "userstory.userstory",
+  "pk": 11
 },
 {
   "fields": {

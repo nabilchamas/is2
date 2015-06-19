@@ -131,7 +131,7 @@ def eliminar_usuario(request, usuario_id):
 
 @login_required
 def listar_usuarios(request):
-    lista_usuarios = User.objects.all().order_by('username')
+    lista_usuarios = User.objects.all().order_by('pk')
     context = {'lista_usuarios':lista_usuarios}
     return render(request, 'usuario/listar_usuarios.html', context)
 

@@ -53,7 +53,7 @@ def eliminar_flujo(request, flujo_id):
 
 
 def listar_flujos(request):
-	lista_flujos = Flujo.objects.all().order_by('nombre')
+	lista_flujos = Flujo.objects.all().order_by('pk')
 	context = {'lista_flujos':lista_flujos}
 	return render(request, 'flujo/listar_flujos.html', context)
 
@@ -61,7 +61,7 @@ def listar_flujos(request):
 
 def desplegar_flujo(request, flujo_id):
 	flujo = Flujo.objects.get(pk=flujo_id)
-	lista_actividades = Actividad.objects.filter(flujo=flujo).order_by('id')
+	lista_actividades = Actividad.objects.filter(flujo=flujo).order_by('pk')
 	context = {'flujo':flujo, 'lista_actividades':lista_actividades}
 	return render(request, 'flujo/desplegar_flujo.html', context)
 
@@ -116,7 +116,7 @@ def eliminar_actividad(request, actividad_id):
 
 
 def listar_actividades(request):
-	lista_actividades = Actividad.objects.all().order_by('nombre')
+	lista_actividades = Actividad.objects.all().order_by('pk')
 	context = {'lista_actividades':lista_actividades}
 	return render(request, 'flujo/listar_actividades.html', context)
 

@@ -124,7 +124,7 @@ def listar_userstories(request):
         Lista los userstories 
     '''
 
-    lista_userstories = UserStory.objects.all().order_by('nombre')
+    lista_userstories = UserStory.objects.all().order_by('pk')
     context = {'lista_userstories':lista_userstories}
     return render(request, 'userstory/listar_userstories.html', context)
 

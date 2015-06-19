@@ -71,7 +71,7 @@ def listar_sprints(request):
 		Lista los sprints
 	'''
 
-	lista_sprints = Sprint.objects.all().order_by('nombre')
+	lista_sprints = Sprint.objects.all().order_by('pk')
 	context = {'lista_sprints':lista_sprints}
 	return render(request, 'sprint/listar_sprints.html', context)
 

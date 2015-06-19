@@ -25,7 +25,7 @@ class UserStory(models.Model):
 	desarrollador = models.ForeignKey(User, null=True)
 	estado = models.CharField(max_length=200, choices=ESTADOS)
 	prioridad = models.CharField(max_length=200, choices=PRIORIDADES, null=True)
-	adjunto = models.ImageField(upload_to='archivos.Archivo/bytes/filename/mimetype', blank=True, null=True)
+	adjunto = models.FileField(upload_to='archivos.Archivo/bytes/filename/mimetype', blank=True, null=True)
 
 	def __str__(self):
 		return self.nombre
